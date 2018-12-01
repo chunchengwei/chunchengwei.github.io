@@ -3,7 +3,7 @@ services:
   blog:
     restart: always
     build:
-        context: hexo
+        context: hexo_docker
         dockerfile: Dockerfile_matery
     image: blog:matery
     container_name: blog
