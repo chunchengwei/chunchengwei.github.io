@@ -1,0 +1,16 @@
+version: '3'
+services:
+  blog:
+    restart: always
+    build:
+        context: hexo
+        dockerfile: Dockerfile_matery
+    image: blog:matery
+    container_name: blog
+    ports:
+      - "4000:4000"
+    volumes:
+     - $HOME/.ssh:/root/.ssh
+     - $PWD/source:/hexo/source
+     - $PWD/themes:/hexo/themes
+     - $PWD/_config.yml:/hexo/_config.yml
