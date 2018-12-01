@@ -1,18 +1,15 @@
 ---
 title: LeetCode 2
-date: 2018-09-25 00:33:00
-author: chwei
+date: 2018-12-01 18:05:40
 img: http://static.blinkfox.com/hexoblog_20180925_sql.jpg
 categories: Algorithm
 tags:
-  - LeetCode
+- LeetCode
 ---
 
 ## 问题描述:
 
 给定两个非空链表代表两个非负整数。数字按逆序存储在每个节点上。求两个数字的和，并按链表的方式返回。
-
-<!--more-->
 
 例如：
 
@@ -30,7 +27,7 @@ tags:
 
 代码如下：
 
-```c++
+```cpp
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -107,7 +104,7 @@ public:
 
 代码如下：
 
-```c++
+```cpp
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -153,7 +150,7 @@ public:
 
 下面是LeetCode上大神的解法，我改成了C++版本的，大神的貌似没有删除不用的节点，这样应该会导致内存泄漏。在C++版本中改进了这一点，但是代码效率就降下来了。
 
-```c++
+```cpp
 /**
  * Definition for singly-linked list.
  * struct ListNode {
