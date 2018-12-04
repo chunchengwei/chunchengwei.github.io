@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://chunchengwei.github.io/"/>
-  <updated>2018-12-04T03:15:28.000Z</updated>
+  <updated>2018-12-04T17:12:30.000Z</updated>
   <id>https://chunchengwei.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于Docker的Hexo博客搭建</title>
+    <link href="https://chunchengwei.github.io/ruan-jian/ji-yu-docker-de-hexo-bo-ke-da-jian/"/>
+    <id>https://chunchengwei.github.io/ruan-jian/ji-yu-docker-de-hexo-bo-ke-da-jian/</id>
+    <published>2018-12-04T11:03:53.000Z</published>
+    <updated>2018-12-04T17:12:30.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-准备知识&quot;&gt;&lt;a href=&quot;#1-准备知识&quot; class=&quot;headerlink&quot; title=&quot;1. 准备知识&quot;&gt;&lt;/a&gt;1. 准备知识&lt;/h2&gt;&lt;p&gt;首先我们需要先了解一下docker的常用命令和hexo的常用命令&lt;/p&gt;
+&lt;h5
+        
+      
+    
+    </summary>
+    
+      <category term="软件" scheme="https://chunchengwei.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+      <category term="Hexo" scheme="https://chunchengwei.github.io/tags/Hexo/"/>
+    
+      <category term="Docker" scheme="https://chunchengwei.github.io/tags/Docker/"/>
+    
+      <category term="hexo-theme-matery" scheme="https://chunchengwei.github.io/tags/hexo-theme-matery/"/>
+    
+  </entry>
   
   <entry>
     <title>负数求余，Python和C++的不同</title>
@@ -320,9 +351,9 @@
       <category term="软件" scheme="https://chunchengwei.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
     
     
-      <category term="Python" scheme="https://chunchengwei.github.io/tags/Python/"/>
-    
       <category term="SciPy" scheme="https://chunchengwei.github.io/tags/SciPy/"/>
+    
+      <category term="Python" scheme="https://chunchengwei.github.io/tags/Python/"/>
     
   </entry>
   

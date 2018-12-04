@@ -1,0 +1,1146 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="基于Docker的Hexo博客搭建, 石锅拌饭, chwei">
+    <meta name="description" content="1. 准备知识首先我们需要先了解一下docker的常用命令和hexo的常用命令
+Docker准备知识：# ****************************** 容器 ****************************** #
+">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>基于Docker的Hexo博客搭建 | 石锅拌饭</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+</head>
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="container">
+            <div class="nav-wrapper">
+                <div class="brand-logo">
+                    <a href="/" class="waves-effect waves-light">
+                        
+                        <img src="/medias/logo.png" class="logo-img hide-on-small-only">
+                        
+                        <span class="logo-span">石锅拌饭</span>
+                    </a>
+                </div>
+                <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li>
+        <a id="toggleSearch" class="waves-effect waves-light">
+            <i id="searchIcon" class="mdi-action-search"></i>
+        </a>
+    </li>
+
+</ul>
+
+<div class="side-nav" id="mobile-nav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">石锅拌饭</div>
+        <div class="logo-desc">
+            
+            真香
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/chunchengwei/chunchengwei.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fa fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+
+    <div class="social-link"><a href="https://github.com/chunchengwei" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github"></i>
+</a>
+<a href="mailto:weicc1989@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <i class="fa fa-envelope-open"></i>
+</a>
+<a href="#!" class="tooltipped" data-tooltip="QQ联系我: 1017119114" data-position="top" data-delay="50">
+    <i class="fa fa-qq"></i>
+</a>
+
+<a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <i class="fa fa-rss"></i>
+</a>
+
+</div>
+</div>
+
+            </div>
+        </div>
+
+        
+        <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/chunchengwei/chunchengwei.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank" data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewbox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/>
+    </svg>
+</a>
+        
+    </nav>
+</header>
+
+
+
+
+
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        基于Docker的Hexo博客搭建
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1,
+    #articleContent h2,
+    #articleContent h3,
+    #articleContent h4,
+    #articleContent h5,
+    #articleContent h6 {
+        padding-top: 76px;
+        margin-top: -76px;
+    }
+
+    #articleContent h1 {
+        line-height: 3.5rem;
+    }
+
+    #articleContent h2 {
+        line-height: 3.2rem;
+    }
+
+    #articleContent h3 {
+        line-height: 2.8rem;
+    }
+
+    #articleContent h4 {
+        line-height: 2.5rem;
+    }
+
+    #articleContent h5 {
+        line-height: 2.2rem;
+    }
+
+    #articleContent h6 {
+        line-height: 1.9rem;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+</style>
+<div class="row">
+    <div class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            
+            <div class="article-tag">
+                
+                <a href="/tags/Hexo/" target="_blank">
+                    <span class="chip bg-color">Hexo</span>
+                </a>
+                
+                <a href="/tags/Docker/" target="_blank">
+                    <span class="chip bg-color">Docker</span>
+                </a>
+                
+                <a href="/tags/hexo-theme-matery/" target="_blank">
+                    <span class="chip bg-color">hexo-theme-matery</span>
+                </a>
+                
+            </div>
+            
+            <div class="post-info">
+                
+                <span class="post-cate">
+                    <i class="fa fa-bookmark fa-fw icon-category"></i>
+                    
+                    <a href="/categories/软件/" class="post-category" target="_blank">
+                        软件
+                    </a>
+                    
+                </span>
+                
+
+                <span class="post-date">
+                    <i class="fa fa-clock-o fa-fw"></i>2018-12-04
+                </span>
+            </div>
+        </div>
+        <hr>
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="1-准备知识"><a href="#1-准备知识" class="headerlink" title="1. 准备知识"></a>1. 准备知识</h2><p>首先我们需要先了解一下docker的常用命令和hexo的常用命令</p>
+<h5 id="Docker准备知识："><a href="#Docker准备知识：" class="headerlink" title="Docker准备知识："></a>Docker准备知识：</h5><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># ****************************** 容器 ****************************** #</span>
+<span class="token comment" spellcheck="true"># 查看正在运行的容器</span>
+$ docker <span class="token function">ps</span>
+<span class="token comment" spellcheck="true"># 查看所有容器</span>
+$ docker <span class="token function">ps</span> -a
+<span class="token comment" spellcheck="true"># 启动/停止某个容器</span>
+$ docker start/stop id/name
+<span class="token comment" spellcheck="true"># 以交互方式启动一个容器</span>
+$ docker start -i id/name
+<span class="token comment" spellcheck="true"># 进入某个容器(使用exit退出后容器也跟着停止运行)</span>
+$ docker attach id/name
+<span class="token comment" spellcheck="true"># 启动一个伪终端以交互式的方式进入某个运行的容器（使用exit退出后容器不停止运行）</span>
+$ docker <span class="token function">exec</span> -it id/name
+<span class="token comment" spellcheck="true"># 删除某个容器</span>
+$ docker <span class="token function">rm</span> id/name
+<span class="token comment" spellcheck="true"># 复制ubuntu容器并且重命名为test且运行，然后以伪终端交互式方式进入容器，运行bash</span>
+$ docker run --name <span class="token function">test</span> -ti ubuntu /bin/bash
+
+<span class="token comment" spellcheck="true"># ****************************** 镜像 ****************************** #</span>
+<span class="token comment" spellcheck="true"># 查看本地镜像</span>
+$ docker images
+<span class="token comment" spellcheck="true"># 删除某个镜像</span>
+$ docker rmi id/name
+<span class="token comment" spellcheck="true"># 基于当前目录下的Dockerfile，创建一个名为name:flag的镜像</span>
+$ docker build -t name:flag <span class="token keyword">.</span>
+</code></pre>
+<p>你可能还需要了解一点Docker Compose的知识：</p>
+<blockquote>
+<p>Docker Compose 是 Docker 容器进行编排的工具，定义和运行多容器的应用，可以一条命令启动多个容器。</p>
+<p>使用Compose 基本上分为三步：</p>
+<ol>
+<li>Dockerfile 定义应用的运行环境</li>
+<li>docker-compose.yml 定义组成应用的各服务</li>
+<li>docker-compose up -d 启动整个应用</li>
+<li>docker-compose down 停止整个应用</li>
+</ol>
+</blockquote>
+<p>官方文档：</p>
+<ol>
+<li><a href="https://docs.docker.com/get-started/" target="_blank" rel="noopener">Get started with Docker</a></li>
+<li><a href="https://docs.docker.com/compose/gettingstarted/" target="_blank" rel="noopener">Get started with Docker Compose</a></li>
+</ol>
+<h5 id="Hexo准备知识："><a href="#Hexo准备知识：" class="headerlink" title="Hexo准备知识："></a>Hexo准备知识：</h5><p>hexo的安装和使用非常简单，官网给出的教程如下，前提是你已经有了一个node的环境。</p>
+<pre class=" language-bash"><code class="language-bash">$ <span class="token function">npm</span> <span class="token function">install</span> hexo-cli -g
+$ hexo init blog
+$ <span class="token function">cd</span> blog
+$ <span class="token function">npm</span> <span class="token function">install</span>
+$ hexo server
+</code></pre>
+<h2 id="2-使用Docker搭建一个hexo环境"><a href="#2-使用Docker搭建一个hexo环境" class="headerlink" title="2. 使用Docker搭建一个hexo环境"></a>2. 使用Docker搭建一个hexo环境</h2><p>首先下载并安装社区版本<a href="https://www.docker.com/get-started" target="_blank" rel="noopener">Docker CE</a>。安装好后，你就可以在终端中调用Docker的指令了。我们先拉取一个node镜像。</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 由于目前hexo不支持最新的 node11.3.0 所以选用node长期支持版10.14.1</span>
+$ docker pull node:10
+</code></pre>
+<p>创建你博客的工作目录，这里我们以 “~/Hexo” 为例：</p>
+<pre class=" language-bash"><code class="language-bash">$ <span class="token function">mkdir</span> -p ~/Hexo <span class="token operator">&amp;&amp;</span> <span class="token function">cd</span> ~/Hexo
+
+<span class="token comment" spellcheck="true"># 创建存放Dockerfile的文件夹</span>
+$ <span class="token function">mkdir</span> hexo_docker <span class="token operator">&amp;&amp;</span> <span class="token function">cd</span> hexo_docker
+
+<span class="token comment" spellcheck="true"># 创建Dockerfile</span>
+$ <span class="token function">touch</span> Dockerfile
+</code></pre>
+<p>Dockerfile文件内容如下：</p>
+<pre class=" language-docker"><code class="language-docker"><span class="token comment" spellcheck="true"># *****************************************************************************</span>
+<span class="token comment" spellcheck="true"># File Name: Dockerfile</span>
+<span class="token comment" spellcheck="true"># Auther: Chuncheng Wei</span>
+<span class="token comment" spellcheck="true"># Email: weicc1989@gmail.com</span>
+<span class="token comment" spellcheck="true"># Created Time: Fri Nov 30 23:08:07 2018</span>
+<span class="token comment" spellcheck="true"># Description:</span>
+<span class="token comment" spellcheck="true">#</span>
+<span class="token comment" spellcheck="true">#     This bases on node:10 image</span>
+<span class="token comment" spellcheck="true">#</span>
+<span class="token comment" spellcheck="true"># *****************************************************************************</span>
+
+
+<span class="token comment" spellcheck="true"># 基础镜像</span>
+<span class="token keyword">FROM</span> node<span class="token punctuation">:</span>10
+
+<span class="token comment" spellcheck="true"># 维护者信息</span>
+<span class="token keyword">MAINTAINER</span> your_name &lt;your_mail<span class="token punctuation">></span>
+
+<span class="token comment" spellcheck="true"># 工作目录</span>
+<span class="token keyword">WORKDIR</span> /hexo
+
+<span class="token comment" spellcheck="true"># 安装Hexo</span>
+<span class="token keyword">RUN</span> npm install hexo<span class="token punctuation">-</span>cli <span class="token punctuation">-</span>g
+<span class="token keyword">RUN</span> hexo init .
+<span class="token keyword">RUN</span> npm install
+
+<span class="token comment" spellcheck="true"># 设置git</span>
+<span class="token keyword">RUN</span> git config <span class="token punctuation">-</span><span class="token punctuation">-</span>global user.name <span class="token string">"your_name"</span>
+<span class="token keyword">RUN</span> git config <span class="token punctuation">-</span><span class="token punctuation">-</span>global user.email <span class="token string">"your_mail"</span>
+
+<span class="token comment" spellcheck="true"># 映射端口</span>
+<span class="token keyword">EXPOSE</span> 4000
+
+<span class="token comment" spellcheck="true"># 运行命令</span>
+<span class="token keyword">CMD</span> <span class="token punctuation">[</span><span class="token string">"/bin/bash"</span><span class="token punctuation">]</span>
+</code></pre>
+<p>基于Docker文件创建 hexo:10 镜像：</p>
+<pre class=" language-bash"><code class="language-bash">$ docker build -t <span class="token string">'hexo:10'</span> <span class="token keyword">.</span>
+</code></pre>
+<p>此时，我们就有了一个可以折腾hexo镜像了，而且在镜像的/hexo目录下我们也已经初始化好了hexo博客的环境。执行下面的命令，我们就可以看到目前拥有的docker镜像了。</p>
+<pre class=" language-bash"><code class="language-bash">$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+hexo                10                  3cae20f1d074        8 seconds ago       1.01GB
+node                10                  d330537fea0f        5 days ago          893MB
+</code></pre>
+<p>此时我们就可以看下初步的效果了，在终端中使用镜像hexo:10以交互模式启动一个容器，将容器的 4000 端口映射到主机的 4000 端口，主机的目录 $HOME/.ssh 映射到容器的 /root/.ssh，并在容器内执行 /bin/bash 命令。</p>
+<pre class=" language-bash"><code class="language-bash">$ docker run -it --name<span class="token operator">=</span><span class="token string">"temp"</span> -p 4000:4000 -v <span class="token variable">$HOME</span>/.ssh:/root/.ssh hexo:10 /bin/bash
+
+<span class="token comment" spellcheck="true"># 会进入容器的bash环境，显示如下。@后面的一串数字和字母是容器的id</span>
+root@b3f600327b99:/hexo<span class="token comment" spellcheck="true">#</span>
+</code></pre>
+<p>在这个环境下执行 hexo s 然后用本地浏览器打开：<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 即可预览你的博客了。显示如下：</p>
+<pre class=" language-bash"><code class="language-bash">root@b3f600327b99:/hexo<span class="token comment" spellcheck="true"># hexo s</span>
+INFO  Start processing
+INFO  Hexo is running at http://localhost:4000 <span class="token keyword">.</span> Press Ctrl+C to stop.
+</code></pre>
+<p><img src="../../images/Screen Shot 2018-12-04 at 9.52.08 PM.png" alt="Screen Shot 2018-12-04 at 9.52.08 PM"></p>
+<h2 id="3-使用hexo-theme-matery主题"><a href="#3-使用hexo-theme-matery主题" class="headerlink" title="3. 使用hexo-theme-matery主题"></a>3. 使用hexo-theme-matery主题</h2><p>此时我们只搭好了一个hexo的基础环境。接下来我们制作一个使用hexo-theme-matery的docker镜像。</p>
+<p>主题的下载地址为：</p>
+<p><a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="noopener">https://github.com/blinkfox/hexo-theme-matery</a></p>
+<p>主题的说明文档：</p>
+<p><a href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md" target="_blank" rel="noopener">https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md</a></p>
+<p>主题主要依赖的npm包如下：</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 代码高亮</span>
+$ <span class="token function">npm</span> i -S hexo-prism-plugin
+<span class="token comment" spellcheck="true"># 搜索</span>
+$ <span class="token function">npm</span> <span class="token function">install</span> hexo-generator-search --save
+<span class="token comment" spellcheck="true"># 中文链接转拼音（可选的）</span>
+$ <span class="token function">npm</span> i hexo-permalink-pinyin --save
+<span class="token comment" spellcheck="true"># 添加RSS订阅支持（可选的）</span>
+$ <span class="token function">npm</span> <span class="token function">install</span> hexo-generator-feed --save
+</code></pre>
+<p>下面我们介绍两种搭建方法，一种搭建简单，但工作目录比较复杂。另一种搭建繁琐，但目录结构简单。</p>
+<p>简单方法搭建好后目录如下：</p>
+<pre class=" language-bash"><code class="language-bash">$ <span class="token function">ls</span>
+_config.yml  docker-compose.yml  node_modules       package.json  scaffolds  themes
+db.json      hexo_docker         package-lock.json  public        <span class="token function">source</span>     yarn.lock
+</code></pre>
+<p>复杂方法搭建好后目录如下：</p>
+<pre class=" language-bash"><code class="language-bash">$ <span class="token function">ls</span>
+_config.yml  docker-compose.yml  hexo_docker  scaffolds  <span class="token function">source</span>  themes
+</code></pre>
+<h3 id="A-简单搭建方法："><a href="#A-简单搭建方法：" class="headerlink" title="A. 简单搭建方法："></a>A. 简单搭建方法：</h3><p>以最终工作目录为 ~/Blog 为例：</p>
+<h4 id="创建新镜像"><a href="#创建新镜像" class="headerlink" title="创建新镜像"></a>创建新镜像</h4><p>首先创建用于创建新镜像的Dockerfile文件，文件命名为Dockerfile_matery</p>
+<pre class=" language-bash"><code class="language-bash">$ <span class="token function">cd</span> ~/Hexo/hexo_docker
+$ <span class="token function">touch</span> Dockerfile_matery
+</code></pre>
+<p>Dockerfile_matery 内容如下：</p>
+<pre class=" language-docker"><code class="language-docker"><span class="token comment" spellcheck="true"># *****************************************************************************</span>
+<span class="token comment" spellcheck="true"># File Name: Dockerfile_matery</span>
+<span class="token comment" spellcheck="true"># Auther: Chuncheng Wei</span>
+<span class="token comment" spellcheck="true"># Email: weicc1989@gmail.com</span>
+<span class="token comment" spellcheck="true"># Created Time: Fri Nov 30 23:08:07 2018</span>
+<span class="token comment" spellcheck="true"># Description:</span>
+<span class="token comment" spellcheck="true">#</span>
+<span class="token comment" spellcheck="true">#     This bases on node:10 image</span>
+<span class="token comment" spellcheck="true">#</span>
+<span class="token comment" spellcheck="true"># *****************************************************************************</span>
+
+
+<span class="token comment" spellcheck="true"># 基础镜像</span>
+<span class="token keyword">FROM</span> hexo<span class="token punctuation">:</span>10
+
+<span class="token comment" spellcheck="true"># 维护者信息</span>
+<span class="token keyword">MAINTAINER</span> your_name &lt;your_mail<span class="token punctuation">></span>
+
+<span class="token comment" spellcheck="true"># 工作目录</span>
+<span class="token keyword">WORKDIR</span> /hexo
+
+<span class="token comment" spellcheck="true"># 安装Hexo插件</span>
+<span class="token keyword">RUN</span> npm i <span class="token punctuation">-</span>S hexo<span class="token punctuation">-</span>prism<span class="token punctuation">-</span>plugin
+<span class="token keyword">RUN</span> npm install hexo<span class="token punctuation">-</span>generator<span class="token punctuation">-</span>search <span class="token punctuation">-</span><span class="token punctuation">-</span>save
+<span class="token keyword">RUN</span> npm i hexo<span class="token punctuation">-</span>permalink<span class="token punctuation">-</span>pinyin <span class="token punctuation">-</span><span class="token punctuation">-</span>save
+<span class="token keyword">RUN</span> npm install hexo<span class="token punctuation">-</span>generator<span class="token punctuation">-</span>feed <span class="token punctuation">-</span><span class="token punctuation">-</span>save
+<span class="token keyword">RUN</span> npm install hexo<span class="token punctuation">-</span>deployer<span class="token punctuation">-</span>git <span class="token punctuation">-</span><span class="token punctuation">-</span>save
+
+<span class="token comment" spellcheck="true"># 映射端口</span>
+<span class="token keyword">EXPOSE</span> 4000
+
+<span class="token comment" spellcheck="true"># 运行命令</span>
+<span class="token keyword">CMD</span> <span class="token punctuation">[</span><span class="token string">"/usr/bin/env"</span><span class="token punctuation">,</span> <span class="token string">"hexo"</span><span class="token punctuation">,</span> <span class="token string">"server"</span><span class="token punctuation">]</span>
+</code></pre>
+<p>创建镜像和容器</p>
+<pre class=" language-bash"><code class="language-bash">$ <span class="token function">cd</span> ~/Hexo
+<span class="token comment" spellcheck="true"># 创建镜像</span>
+$ docker build -t <span class="token string">'temp:10'</span> -f Dockerfile_matery ./hexo_docker
+<span class="token comment" spellcheck="true"># 创建容器并启动</span>
+$ docker run -it --name<span class="token operator">=</span><span class="token string">"simple"</span> -p 4000:4000 -v <span class="token variable">$HOME</span>/.ssh:/root/.ssh -v <span class="token variable">$PWD</span>/simple:/hexo temp:10 /bin/bash
+</code></pre>
+<h4 id="启动容器，并设置主题"><a href="#启动容器，并设置主题" class="headerlink" title="启动容器，并设置主题"></a>启动容器，并设置主题</h4><p>进入容器后，初始化hexo博客</p>
+<pre class=" language-bash"><code class="language-bash">$ hexo init <span class="token keyword">.</span>
+</code></pre>
+<p>另开一个终端，下载<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="noopener">hexo-theme-matery</a>主题，并按<a href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md" target="_blank" rel="noopener">说明文档</a>设置。</p>
+<p>切回到容器终端，就可以执行各种hexo的指令了。</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 生成静态网页，并布置到网站上，前提设置好_config.yml文件中的deploy参数</span>
+$ hexo g -d
+<span class="token comment" spellcheck="true"># 本地访问http://localhost:4000预览</span>
+$ hexo s
+</code></pre>
+<p>下次重启容器只需要输入下面指令即可：</p>
+<pre class=" language-bash"><code class="language-bash">$ docker start -i simple
+</code></pre>
+<hr>
+<h4 id="创建服务"><a href="#创建服务" class="headerlink" title="创建服务"></a>创建服务</h4><p>此时简单方法的搭建已经完成。这种方法的好处就是简单，而且可以随时在容器中执行操作。跟本地环境几乎没区别。很方便。如果你觉得每次启动容器后还要输入命令，比较麻烦。那么就可以参照下面的教程写一个docker 的服务文件，即docker-compose.yml：</p>
+<p>把相关文件都整合到simple目录下：</p>
+<pre class=" language-bash"><code class="language-bash">$ <span class="token function">cp</span> -r ~/Hexo/hexo_docker ~/Hexo/simple
+$ <span class="token function">cd</span> ~/Hexo/simple
+$ <span class="token function">touch</span> docker-compose.yml
+</code></pre>
+<p>docker-compose.yml文件：</p>
+<pre class=" language-docker"><code class="language-docker">version<span class="token punctuation">:</span> <span class="token string">'3'</span>
+services<span class="token punctuation">:</span>
+  blog<span class="token punctuation">:</span>
+    restart<span class="token punctuation">:</span> always
+    build<span class="token punctuation">:</span>
+        context<span class="token punctuation">:</span> hexo_docker
+        dockerfile<span class="token punctuation">:</span> Dockerfile_matery
+    image<span class="token punctuation">:</span> temp<span class="token punctuation">:</span>10
+    container_name<span class="token punctuation">:</span> temp_simple
+    ports<span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">"4000:4000"</span>
+    volumes<span class="token punctuation">:</span>
+     <span class="token punctuation">-</span> $HOME/.ssh<span class="token punctuation">:</span>/root/.ssh
+     <span class="token punctuation">-</span> $PWD<span class="token punctuation">:</span>/hexo
+</code></pre>
+<p>这样启动服务时，容器就自动执行Dockerfile中写好的CMD指令，即hexo serve。启动和关闭服务如下：</p>
+<pre class=" language-bash"><code class="language-bash">$ docker-compose up -d     <span class="token comment" spellcheck="true"># 启动整个应用</span>
+$ docker-compose down     <span class="token comment" spellcheck="true"># 停止整个应用</span>
+</code></pre>
+<h3 id="B-复杂搭建方法"><a href="#B-复杂搭建方法" class="headerlink" title="B. 复杂搭建方法"></a>B. 复杂搭建方法</h3><p>为了尽量简化博客目录，我们可以把不相关的文件保存在Docker镜像里。在博客目录只保留内容相关的文件。</p>
+<p>首先我们先列出需要保留的目录和文件：</p>
+<ul>
+<li>docker相关：<ul>
+<li>docker-compose.yml    服务配置文件</li>
+<li>hexo_docker/    用于存放Dockerfile文件</li>
+</ul>
+</li>
+<li>hexo相关：<ul>
+<li>scaffolds/    存放模版文件</li>
+<li>source/        存放用户资源文件，post，draft</li>
+<li>themes/      存放主题</li>
+</ul>
+</li>
+<li>git相关：<ul>
+<li>.deploy_git/    hexo-deployer-git插件用于存放commit历史记录。</li>
+</ul>
+</li>
+</ul>
+<p>其中.deploy_git/目录如果不保留在本地会导致每次都重新commit全部文件导致远程的库会越来越大。</p>
+<p>简化目录的思路就是把上述文件留在本地然后每次启动应用时挂在到容器内部即可。这里我们以目录~/hexo/complex为例，讲述搭过程：</p>
+<h4 id="筹备工作（将上述文件复制到complex目录）："><a href="#筹备工作（将上述文件复制到complex目录）：" class="headerlink" title="筹备工作（将上述文件复制到complex目录）："></a>筹备工作（将上述文件复制到complex目录）：</h4><pre class=" language-bash"><code class="language-bash">$ <span class="token function">mkdir</span> -p ~/hexo/complex
+$ <span class="token function">cd</span> ~/hexo/simple
+$ <span class="token function">cp</span> -r _config.yml docker-compose.yml hexo_docker scaffolds <span class="token function">source</span> themes .deploy_git/ <span class="token punctuation">..</span>/complex
+$ <span class="token function">cd</span> ~/hexo/complex
+</code></pre>
+<p>当然你也可以通过其他的方式获得上述文件复制到complex文件夹即可。</p>
+<h4 id="修改Dockerfile-matery文件："><a href="#修改Dockerfile-matery文件：" class="headerlink" title="修改Dockerfile_matery文件："></a>修改Dockerfile_matery文件：</h4><pre class=" language-docker"><code class="language-docker"><span class="token comment" spellcheck="true"># 基础镜像</span>
+<span class="token keyword">FROM</span> hexo<span class="token punctuation">:</span>10
+
+<span class="token comment" spellcheck="true"># 维护者信息</span>
+<span class="token keyword">MAINTAINER</span> your_name &lt;your_mail<span class="token punctuation">></span>
+
+<span class="token comment" spellcheck="true"># 工作目录</span>
+<span class="token keyword">WORKDIR</span> /hexo
+
+<span class="token comment" spellcheck="true"># 安装Hexo插件</span>
+<span class="token keyword">RUN</span> npm i <span class="token punctuation">-</span>S hexo<span class="token punctuation">-</span>prism<span class="token punctuation">-</span>plugin
+<span class="token keyword">RUN</span> npm install hexo<span class="token punctuation">-</span>generator<span class="token punctuation">-</span>search <span class="token punctuation">-</span><span class="token punctuation">-</span>save
+<span class="token keyword">RUN</span> npm i hexo<span class="token punctuation">-</span>permalink<span class="token punctuation">-</span>pinyin <span class="token punctuation">-</span><span class="token punctuation">-</span>save
+<span class="token keyword">RUN</span> npm install hexo<span class="token punctuation">-</span>generator<span class="token punctuation">-</span>feed <span class="token punctuation">-</span><span class="token punctuation">-</span>save
+<span class="token keyword">RUN</span> npm install hexo<span class="token punctuation">-</span>deployer<span class="token punctuation">-</span>git <span class="token punctuation">-</span><span class="token punctuation">-</span>save
+
+<span class="token comment" spellcheck="true"># 挂载volume</span>
+<span class="token keyword">VOLUME</span> <span class="token punctuation">[</span><span class="token string">"/hexo/.deploy_git"</span><span class="token punctuation">,</span> <span class="token string">"/hexo/scaffolds"</span><span class="token punctuation">,</span> <span class="token string">"/hexo/source"</span><span class="token punctuation">,</span> <span class="token string">"/hexo/themes"</span><span class="token punctuation">,</span> <span class="token string">"/root/.ssh"</span><span class="token punctuation">]</span>
+
+<span class="token comment" spellcheck="true"># 映射端口</span>
+<span class="token keyword">EXPOSE</span> 4000
+
+<span class="token comment" spellcheck="true"># 运行命令</span>
+<span class="token keyword">CMD</span> <span class="token punctuation">[</span><span class="token string">"/usr/bin/env"</span><span class="token punctuation">,</span> <span class="token string">"hexo"</span><span class="token punctuation">,</span> <span class="token string">"server"</span><span class="token punctuation">]</span>
+</code></pre>
+<p>与simple的相比只是添加挂载volume一项。</p>
+<h4 id="修改docker-compose-yml文件"><a href="#修改docker-compose-yml文件" class="headerlink" title="修改docker-compose.yml文件"></a>修改docker-compose.yml文件</h4><pre class=" language-docker"><code class="language-docker">version<span class="token punctuation">:</span> <span class="token string">'3'</span>
+services<span class="token punctuation">:</span>
+  blog<span class="token punctuation">:</span>
+    restart<span class="token punctuation">:</span> always
+    build<span class="token punctuation">:</span>
+        context<span class="token punctuation">:</span> hexo_docker
+        dockerfile<span class="token punctuation">:</span> Dockerfile_matery
+    image<span class="token punctuation">:</span> blog<span class="token punctuation">:</span>matery
+    container_name<span class="token punctuation">:</span> blog
+    ports<span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">"4000:4000"</span>
+    volumes<span class="token punctuation">:</span>
+     <span class="token punctuation">-</span> $HOME/.ssh<span class="token punctuation">:</span>/root/.ssh
+     <span class="token punctuation">-</span> $PWD/.deploy_git<span class="token punctuation">:</span>/hexo/.deploy_git
+     <span class="token punctuation">-</span> $PWD/scaffolds<span class="token punctuation">:</span>/hexo/scaffolds
+     <span class="token punctuation">-</span> $PWD/source<span class="token punctuation">:</span>/hexo/source
+     <span class="token punctuation">-</span> $PWD/themes<span class="token punctuation">:</span>/hexo/themes
+     <span class="token punctuation">-</span> $PWD/_config.yml<span class="token punctuation">:</span>/hexo/_config.yml
+</code></pre>
+<p>同样也只是把本地文件挂载到容器中。</p>
+<p>此时就已经完成了，运行方法如下：</p>
+<pre class=" language-bash"><code class="language-bash">$ <span class="token function">cd</span> ~/hexo/complex
+<span class="token comment" spellcheck="true"># 启动应用，此时即可访问http://localhost:4000 查看效果</span>
+$ docker-compose up -d
+
+<span class="token comment" spellcheck="true"># 创建新post</span>
+$ docker <span class="token function">exec</span> blog hexo new post <span class="token string">"your_post_name"</span>
+
+<span class="token comment" spellcheck="true"># 生成静态网页并发布</span>
+$ docker <span class="token function">exec</span> blog hexo g -d
+
+<span class="token comment" spellcheck="true"># 停止应用</span>
+$ docker-compose down
+</code></pre>
+<p>任何hexo的指令都可以通过前面加上docker exec blog来执行。其中blog为容器名。</p>
+<p>当然为了方便也可以在.bashrc中添加如下语句</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">alias</span> hexo<span class="token operator">=</span><span class="token string">"docker exec blog hexo"</span>
+</code></pre>
+<p>这样就可以在终端中直接执行 hexo g -d 之类的语句了，而不用加上前面 docker exec blog</p>
+<hr>
+<h2 id="4-结语"><a href="#4-结语" class="headerlink" title="4. 结语"></a>4. 结语</h2><p>至此，整个环境就搭建完了。</p>
+<p>如何建立远程分支将hexo博客的源码和生成的静态文件push到不同的分支上可以参阅：</p>
+<p><a href="https://o--o.win/Website/Hexo_set_branch/" target="_blank" rel="noopener">Hexo建分支Push源文件到仓库</a></p>
+<p>插入图片的问题可以参阅：</p>
+<p><a href="https://o--o.win/Website/HexoPic/" target="_blank" rel="noopener">Hexo插本地图不借助插件和图床</a></p>
+<p>这是个很棒的解决方案。</p>
+<p>以及如何插入jupyer notebook，以及基于原主题的一些修改，我会整理到下一篇博客里。</p>
+
+            </div>
+            <hr>
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff;
+        background-color: #22AB38;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff;
+        background-color: #019FE8;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a class="reward-link btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs">
+                        <li class="tab wechat-tab waves-effect waves-light"><a class="active" href="#wechat">微信</a></li>
+                        <li class="tab alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                    </ul>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('#reward .reward-link').on('click', function () {
+            $('#rewardModal').openModal();
+        });
+
+        $('#rewardModal .close').on('click', function () {
+            $('#rewardModal').closeModal();
+        });
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            <div class="reprint">
+                <p>
+                    <span class="reprint-tip">转载请注明: </span>
+                    <a href="https://chunchengwei.github.io" class="b-link-green">石锅拌饭</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/ruan-jian/ji-yu-docker-de-hexo-bo-ke-da-jian/" class="b-link-green">基于Docker的Hexo博客搭建</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '44134b2ded079e032ca6',
+        clientSecret: 'a1cf3cd81f6358339bc641be3d10214cca9e56cc',
+        repo: 'chunchengwei.github.io',
+        owner: 'chunchengwei',
+        admin: ["chunchengwei"],
+        id: '2018-12-04T11-03-53',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">本篇</div>
+            <div class="card">
+                <a href="/ruan-jian/ji-yu-docker-de-hexo-bo-ke-da-jian/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="基于Docker的Hexo博客搭建">
+                        
+                        <span class="card-title">基于Docker的Hexo博客搭建</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">1. 准备知识首先我们需要先了解一下docker的常用命令和hexo的常用命令
+Docker准备知识：# ****************************** 容器 ****************************** #
+</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-04
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/软件/" class="post-category" target="_blank">
+                                    软件
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Hexo/" target="_blank">
+                        <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                    <a href="/tags/Docker/" target="_blank">
+                        <span class="chip bg-color">Docker</span>
+                    </a>
+                    
+                    <a href="/tags/hexo-theme-matery/" target="_blank">
+                        <span class="chip bg-color">hexo-theme-matery</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">下一篇</div>
+            <div class="card">
+                <a href="/ruan-jian/fu-shu-qiu-yu-python-he-c-de-bu-tong/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="负数求余，Python和C++的不同">
+                        
+                        <span class="card-title">负数求余，Python和C++的不同</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">先上例子In [1]: -3 % 10
+Out[1]: 7
+
+root [0] -3 % 10
+(int) -3
+
+
+分析原因：在数学公式中，两种语言的求余数的算法都是一样的：
+
+余数 = 被除数 - 除数 * 商
+
+唯一的区别是，整除（即</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-04
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/软件/" class="post-category" target="_blank">
+                                    软件
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Python/" target="_blank">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                    <a href="/tags/C/" target="_blank">
+                        <span class="chip bg-color">C++</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+    </div>
+    <div class="col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title">目录</div>
+            <div id="toc-content">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+    });
+</script>
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            &copy;<a href="https://chunchengwei.github.io" target="_blank">Chuncheng Wei</a> 2018 |
+            <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 |
+            <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a> 主题
+        </div>
+        <div class="col s12 m4 l4 social-link"><a href="https://github.com/chunchengwei" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github"></i>
+</a>
+<a href="mailto:weicc1989@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <i class="fa fa-envelope-open"></i>
+</a>
+<a href="#!" class="tooltipped" data-tooltip="QQ联系我: 1017119114" data-position="top" data-delay="50">
+    <i class="fa fa-qq"></i>
+</a>
+
+<a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <i class="fa fa-rss"></i>
+</a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title">搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input" autofocus>
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/js/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+</body>
+</html>
