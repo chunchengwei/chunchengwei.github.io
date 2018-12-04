@@ -27,7 +27,7 @@ RUN npm install hexo-generator-feed --save
 RUN npm install hexo-deployer-git --save
 
 # 挂载volume
-VOLUME ["/hexo/source", "/hexo/themes", "/root/.ssh"]
+VOLUME ["/hexo/.deploy_git", "/hexo/scaffolds", "/hexo/source", "/hexo/themes", "/root/.ssh"]
 
 # 映射端口
 EXPOSE 4000
