@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>石锅拌饭</title>
+  
+  <subtitle>石锅拌饭</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://chunchengwei.github.io/"/>
+  <updated>2018-12-04T09:14:49.000Z</updated>
+  <id>https://chunchengwei.github.io/</id>
+  
+  <author>
+    <name>Chwei</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>负数求余，Python和C++的不同</title>
+    <link href="https://chunchengwei.github.io/ruan-jian/fu-shu-qiu-yu-python-he-c-de-bu-tong/"/>
+    <id>https://chunchengwei.github.io/ruan-jian/fu-shu-qiu-yu-python-he-c-de-bu-tong/</id>
+    <published>2018-12-04T03:12:30.000Z</published>
+    <updated>2018-12-04T09:14:49.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h5 id=&quot;先上例子&quot;&gt;&lt;a href=&quot;#先上例子&quot; class=&quot;headerlink&quot; title=&quot;先上例子&quot;&gt;&lt;/a&gt;先上例子&lt;/h5&gt;&lt;pre class=&quot; language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;In
+        
+      
+    
+    </summary>
+    
+      <category term="软件" scheme="https://chunchengwei.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+      <category term="Python" scheme="https://chunchengwei.github.io/tags/Python/"/>
+    
+      <category term="C++" scheme="https://chunchengwei.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>神经网络动量因子</title>
+    <link href="https://chunchengwei.github.io/ai/shen-jing-wang-luo-dong-liang-yin-zi/"/>
+    <id>https://chunchengwei.github.io/ai/shen-jing-wang-luo-dong-liang-yin-zi/</id>
+    <published>2018-12-04T03:02:14.000Z</published>
+    <updated>2018-12-04T09:14:49.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;反向传播算法中，学习率 $\eta$ 越小，每次迭代下降的步长越小，轨迹空间越平滑，学习速度越慢，提 $\eta$ 会加快学习速度，但网络权值的变化不稳定。为此，D.E.
+        
+      
+    
+    </summary>
+    
+      <category term="AI" scheme="https://chunchengwei.github.io/categories/AI/"/>
+    
+    
+      <category term="DP" scheme="https://chunchengwei.github.io/tags/DP/"/>
+    
+      <category term="NN" scheme="https://chunchengwei.github.io/tags/NN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DataFrame小技巧</title>
+    <link href="https://chunchengwei.github.io/ruan-jian/dataframe-xiao-ji-qiao/"/>
+    <id>https://chunchengwei.github.io/ruan-jian/dataframe-xiao-ji-qiao/</id>
+    <published>2018-12-04T02:59:34.000Z</published>
+    <updated>2018-12-04T09:14:49.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-筛选数据&quot;&gt;&lt;a href=&quot;#1-筛选数据&quot; class=&quot;headerlink&quot; title=&quot;1. 筛选数据&quot;&gt;&lt;/a&gt;1. 筛选数据&lt;/h2&gt;&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="软件" scheme="https://chunchengwei.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+      <category term="pandas" scheme="https://chunchengwei.github.io/tags/pandas/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java笔记</title>
+    <link href="https://chunchengwei.github.io/ruan-jian/java-bi-ji/"/>
+    <id>https://chunchengwei.github.io/ruan-jian/java-bi-ji/</id>
+    <published>2018-12-04T02:55:34.000Z</published>
+    <updated>2018-12-04T09:14:49.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;主要参考：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.runoob.com/java/java-tutorial.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;java教程&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1
+        
+      
+    
+    </summary>
+    
+      <category term="软件" scheme="https://chunchengwei.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+      <category term="java" scheme="https://chunchengwei.github.io/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SQL语法手册</title>
+    <link href="https://chunchengwei.github.io/ruan-jian/sql-yu-fa-shou-ce/"/>
+    <id>https://chunchengwei.github.io/ruan-jian/sql-yu-fa-shou-ce/</id>
+    <published>2018-12-04T02:52:30.000Z</published>
+    <updated>2018-12-04T09:14:49.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;主要参考：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.runoob.com/w3cnote/sql-syntax-manual.html&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="软件" scheme="https://chunchengwei.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+      <category term="SQL" scheme="https://chunchengwei.github.io/tags/SQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一个有关分解质因数的面试题</title>
+    <link href="https://chunchengwei.github.io/shua-ti/yi-ge-you-guan-fen-jie-zhi-yin-shu-de-mian-shi-ti/"/>
+    <id>https://chunchengwei.github.io/shua-ti/yi-ge-you-guan-fen-jie-zhi-yin-shu-de-mian-shi-ti/</id>
+    <published>2018-12-04T02:47:01.000Z</published>
+    <updated>2018-12-04T09:14:49.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;问题：给定两个字符串s、m，初始长度都为1。定义两种操作：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;m = s, s = 2s&lt;/li&gt;
+&lt;li&gt;s = s +
+        
+      
+    
+    </summary>
+    
+      <category term="刷题" scheme="https://chunchengwei.github.io/categories/%E5%88%B7%E9%A2%98/"/>
+    
+    
+      <category term="面试题" scheme="https://chunchengwei.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一个有关二分法的面试题</title>
+    <link href="https://chunchengwei.github.io/shua-ti/yi-ge-you-guan-er-fen-fa-de-mian-shi-ti/"/>
+    <id>https://chunchengwei.github.io/shua-ti/yi-ge-you-guan-er-fen-fa-de-mian-shi-ti/</id>
+    <published>2018-12-04T02:44:05.000Z</published>
+    <updated>2018-12-04T09:14:49.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;问题：给定一个有序数组，再给定一个数c，判断数组中是否存在两个数a，b，满足a + b = c。要求时间复杂度$O(n)$，空间复杂度$O(1)$。&lt;/p&gt;
+&lt;h3 id=&quot;解决方法：&quot;&gt;&lt;a href=&quot;#解决方法：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="刷题" scheme="https://chunchengwei.github.io/categories/%E5%88%B7%E9%A2%98/"/>
+    
+    
+      <category term="二分法" scheme="https://chunchengwei.github.io/tags/%E4%BA%8C%E5%88%86%E6%B3%95/"/>
+    
+      <category term="面试题" scheme="https://chunchengwei.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Five-point stencil</title>
+    <link href="https://chunchengwei.github.io/suan-fa/five-point-stencil/"/>
+    <id>https://chunchengwei.github.io/suan-fa/five-point-stencil/</id>
+    <published>2018-12-04T02:39:27.000Z</published>
+    <updated>2018-12-04T09:14:49.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Five-point stencil 在一维和二维中的形式：&lt;/p&gt;
+&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://chunchengwei.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="差分" scheme="https://chunchengwei.github.io/tags/%E5%B7%AE%E5%88%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>黄金分割搜索</title>
+    <link href="https://chunchengwei.github.io/suan-fa/huang-jin-fen-ge-sou-suo/"/>
+    <id>https://chunchengwei.github.io/suan-fa/huang-jin-fen-ge-sou-suo/</id>
+    <published>2018-12-04T02:33:34.000Z</published>
+    <updated>2018-12-04T09:14:49.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;适用于，一维单峰函数搜索最小值或者最大值。&lt;/p&gt;
+&lt;h3 id=&quot;核心思想：&quot;&gt;&lt;a href=&quot;#核心思想：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://chunchengwei.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="Minimization" scheme="https://chunchengwei.github.io/tags/Minimization/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决numpy 0d arrays error</title>
+    <link href="https://chunchengwei.github.io/ruan-jian/jie-jue-numpy-0d-arrays-error/"/>
+    <id>https://chunchengwei.github.io/ruan-jian/jie-jue-numpy-0d-arrays-error/</id>
+    <published>2018-12-04T02:17:43.000Z</published>
+    <updated>2018-12-04T09:14:49.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;使用numpy array时，可能会遇到 &lt;strong&gt;&lt;em&gt;“iteration over a 0-d array”&lt;/em&gt;&lt;/strong&gt; 的错误。&lt;/p&gt;
+&lt;h6 id=&quot;例1：&quot;&gt;&lt;a href=&quot;#例1：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="软件" scheme="https://chunchengwei.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+      <category term="Python" scheme="https://chunchengwei.github.io/tags/Python/"/>
+    
+      <category term="numpy" scheme="https://chunchengwei.github.io/tags/numpy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Scipy积分</title>
+    <link href="https://chunchengwei.github.io/ruan-jian/scipy-ji-fen/"/>
+    <id>https://chunchengwei.github.io/ruan-jian/scipy-ji-fen/</id>
+    <published>2018-12-04T02:13:08.000Z</published>
+    <updated>2018-12-04T09:14:49.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;数值积分&quot;&gt;&lt;a href=&quot;#数值积分&quot; class=&quot;headerlink&quot; title=&quot;数值积分&quot;&gt;&lt;/a&gt;数值积分&lt;/h2&gt;&lt;h3 id=&quot;一重积分（SciPy-integrate-quad）：&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="软件" scheme="https://chunchengwei.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+      <category term="SciPy" scheme="https://chunchengwei.github.io/tags/SciPy/"/>
+    
+      <category term="Python" scheme="https://chunchengwei.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 4</title>
+    <link href="https://chunchengwei.github.io/leetcode/leetcode-4/"/>
+    <id>https://chunchengwei.github.io/leetcode/leetcode-4/</id>
+    <published>2018-12-03T18:05:40.000Z</published>
+    <updated>2018-12-04T09:14:49.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="刷题" scheme="https://chunchengwei.github.io/categories/%E5%88%B7%E9%A2%98/"/>
+    
+    
+      <category term="LeetCode" scheme="https://chunchengwei.github.io/tags/LeetCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 2</title>
+    <link href="https://chunchengwei.github.io/leetcode/leetcode-2/"/>
+    <id>https://chunchengwei.github.io/leetcode/leetcode-2/</id>
+    <published>2018-12-01T18:05:40.000Z</published>
+    <updated>2018-12-04T09:14:49.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="刷题" scheme="https://chunchengwei.github.io/categories/%E5%88%B7%E9%A2%98/"/>
+    
+    
+      <category term="LeetCode" scheme="https://chunchengwei.github.io/tags/LeetCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode 3</title>
+    <link href="https://chunchengwei.github.io/leetcode/leetcode-3/"/>
+    <id>https://chunchengwei.github.io/leetcode/leetcode-3/</id>
+    <published>2018-12-01T18:05:12.000Z</published>
+    <updated>2018-12-04T09:14:49.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="刷题" scheme="https://chunchengwei.github.io/categories/%E5%88%B7%E9%A2%98/"/>
+    
+    
+      <category term="LeetCode" scheme="https://chunchengwei.github.io/tags/LeetCode/"/>
+    
+  </entry>
+  
+</feed>
