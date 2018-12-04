@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://chunchengwei.github.io/"/>
-  <updated>2018-12-04T09:14:49.000Z</updated>
+  <updated>2018-12-04T03:15:28.000Z</updated>
   <id>https://chunchengwei.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://chunchengwei.github.io/ruan-jian/fu-shu-qiu-yu-python-he-c-de-bu-tong/"/>
     <id>https://chunchengwei.github.io/ruan-jian/fu-shu-qiu-yu-python-he-c-de-bu-tong/</id>
     <published>2018-12-04T03:12:30.000Z</published>
-    <updated>2018-12-04T09:14:49.000Z</updated>
+    <updated>2018-12-04T03:15:28.000Z</updated>
     
     <summary type="html">
     
@@ -49,7 +49,7 @@
     <link href="https://chunchengwei.github.io/ai/shen-jing-wang-luo-dong-liang-yin-zi/"/>
     <id>https://chunchengwei.github.io/ai/shen-jing-wang-luo-dong-liang-yin-zi/</id>
     <published>2018-12-04T03:02:14.000Z</published>
-    <updated>2018-12-04T09:14:49.000Z</updated>
+    <updated>2018-12-04T03:11:36.000Z</updated>
     
     <summary type="html">
     
@@ -77,7 +77,7 @@
     <link href="https://chunchengwei.github.io/ruan-jian/dataframe-xiao-ji-qiao/"/>
     <id>https://chunchengwei.github.io/ruan-jian/dataframe-xiao-ji-qiao/</id>
     <published>2018-12-04T02:59:34.000Z</published>
-    <updated>2018-12-04T09:14:49.000Z</updated>
+    <updated>2018-12-04T03:01:05.000Z</updated>
     
     <summary type="html">
     
@@ -103,7 +103,7 @@
     <link href="https://chunchengwei.github.io/ruan-jian/java-bi-ji/"/>
     <id>https://chunchengwei.github.io/ruan-jian/java-bi-ji/</id>
     <published>2018-12-04T02:55:34.000Z</published>
-    <updated>2018-12-04T09:14:49.000Z</updated>
+    <updated>2018-12-04T02:58:38.000Z</updated>
     
     <summary type="html">
     
@@ -133,7 +133,7 @@
     <link href="https://chunchengwei.github.io/ruan-jian/sql-yu-fa-shou-ce/"/>
     <id>https://chunchengwei.github.io/ruan-jian/sql-yu-fa-shou-ce/</id>
     <published>2018-12-04T02:52:30.000Z</published>
-    <updated>2018-12-04T09:14:49.000Z</updated>
+    <updated>2018-12-04T02:54:29.000Z</updated>
     
     <summary type="html">
     
@@ -161,7 +161,7 @@
     <link href="https://chunchengwei.github.io/shua-ti/yi-ge-you-guan-fen-jie-zhi-yin-shu-de-mian-shi-ti/"/>
     <id>https://chunchengwei.github.io/shua-ti/yi-ge-you-guan-fen-jie-zhi-yin-shu-de-mian-shi-ti/</id>
     <published>2018-12-04T02:47:01.000Z</published>
-    <updated>2018-12-04T09:14:49.000Z</updated>
+    <updated>2018-12-04T08:30:28.000Z</updated>
     
     <summary type="html">
     
@@ -191,7 +191,7 @@
     <link href="https://chunchengwei.github.io/shua-ti/yi-ge-you-guan-er-fen-fa-de-mian-shi-ti/"/>
     <id>https://chunchengwei.github.io/shua-ti/yi-ge-you-guan-er-fen-fa-de-mian-shi-ti/</id>
     <published>2018-12-04T02:44:05.000Z</published>
-    <updated>2018-12-04T09:14:49.000Z</updated>
+    <updated>2018-12-04T02:46:11.000Z</updated>
     
     <summary type="html">
     
@@ -209,9 +209,9 @@
       <category term="刷题" scheme="https://chunchengwei.github.io/categories/%E5%88%B7%E9%A2%98/"/>
     
     
-      <category term="二分法" scheme="https://chunchengwei.github.io/tags/%E4%BA%8C%E5%88%86%E6%B3%95/"/>
-    
       <category term="面试题" scheme="https://chunchengwei.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+      <category term="二分法" scheme="https://chunchengwei.github.io/tags/%E4%BA%8C%E5%88%86%E6%B3%95/"/>
     
   </entry>
   
@@ -220,7 +220,7 @@
     <link href="https://chunchengwei.github.io/suan-fa/five-point-stencil/"/>
     <id>https://chunchengwei.github.io/suan-fa/five-point-stencil/</id>
     <published>2018-12-04T02:39:27.000Z</published>
-    <updated>2018-12-04T09:14:49.000Z</updated>
+    <updated>2018-12-04T02:42:05.000Z</updated>
     
     <summary type="html">
     
@@ -247,7 +247,7 @@
     <link href="https://chunchengwei.github.io/suan-fa/huang-jin-fen-ge-sou-suo/"/>
     <id>https://chunchengwei.github.io/suan-fa/huang-jin-fen-ge-sou-suo/</id>
     <published>2018-12-04T02:33:34.000Z</published>
-    <updated>2018-12-04T09:14:49.000Z</updated>
+    <updated>2018-12-04T02:38:22.000Z</updated>
     
     <summary type="html">
     
@@ -274,7 +274,7 @@
     <link href="https://chunchengwei.github.io/ruan-jian/jie-jue-numpy-0d-arrays-error/"/>
     <id>https://chunchengwei.github.io/ruan-jian/jie-jue-numpy-0d-arrays-error/</id>
     <published>2018-12-04T02:17:43.000Z</published>
-    <updated>2018-12-04T09:14:49.000Z</updated>
+    <updated>2018-12-04T02:23:44.000Z</updated>
     
     <summary type="html">
     
@@ -303,7 +303,7 @@
     <link href="https://chunchengwei.github.io/ruan-jian/scipy-ji-fen/"/>
     <id>https://chunchengwei.github.io/ruan-jian/scipy-ji-fen/</id>
     <published>2018-12-04T02:13:08.000Z</published>
-    <updated>2018-12-04T09:14:49.000Z</updated>
+    <updated>2018-12-04T02:25:00.000Z</updated>
     
     <summary type="html">
     
@@ -331,7 +331,7 @@
     <link href="https://chunchengwei.github.io/leetcode/leetcode-4/"/>
     <id>https://chunchengwei.github.io/leetcode/leetcode-4/</id>
     <published>2018-12-03T18:05:40.000Z</published>
-    <updated>2018-12-04T09:14:49.000Z</updated>
+    <updated>2018-12-04T07:52:28.000Z</updated>
     
     <summary type="html">
     
@@ -357,7 +357,7 @@
     <link href="https://chunchengwei.github.io/leetcode/leetcode-2/"/>
     <id>https://chunchengwei.github.io/leetcode/leetcode-2/</id>
     <published>2018-12-01T18:05:40.000Z</published>
-    <updated>2018-12-04T09:14:49.000Z</updated>
+    <updated>2018-12-04T02:06:36.000Z</updated>
     
     <summary type="html">
     
@@ -383,7 +383,7 @@
     <link href="https://chunchengwei.github.io/leetcode/leetcode-3/"/>
     <id>https://chunchengwei.github.io/leetcode/leetcode-3/</id>
     <published>2018-12-01T18:05:12.000Z</published>
-    <updated>2018-12-04T09:14:49.000Z</updated>
+    <updated>2018-12-04T02:06:27.000Z</updated>
     
     <summary type="html">
     
