@@ -2,7 +2,7 @@
 title: LeetCode 3
 date: 2018-12-01 18:05:12
 img: http://static.blinkfox.com/hexoblog_20180925_sql.jpg
-categories: Algorithm
+categories: 刷题
 tags:
 - LeetCode
 ---

@@ -86,6 +86,7 @@ theme: hexo-theme-matery
 deploy:
   type: git
   repo: github:chunchengwei/chunchengwei.github.io.git
+  branch: gh-pages
 
 search:
   path: search.xml
