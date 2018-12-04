@@ -5,7 +5,7 @@
 # Created Time: Fri Nov 30 23:08:07 2018
 # Description:
 #
-#     This bases on node:latest image
+#     This bases on node:10 image
 #
 # *****************************************************************************
 
@@ -27,9 +27,6 @@ RUN npm install
 # 设置git
 RUN git config --global user.name "Chuncheng Wei"
 RUN git config --global user.email "weicc1989@gmail.com"
-
-# 挂载volume
-VOLUME ["/hexo/source", "/hexo/themes", "/root/.ssh"]
 
 # 映射端口
 EXPOSE 4000
