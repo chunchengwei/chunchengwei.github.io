@@ -431,9 +431,55 @@ java中默认声明的小数是do">
 </li>
 </ul>
 <h3 id="修饰符："><a href="#修饰符：" class="headerlink" title="修饰符："></a>修饰符：</h3><h4 id="访问控制修饰符："><a href="#访问控制修饰符：" class="headerlink" title="访问控制修饰符："></a>访问控制修饰符：</h4><ul>
-<li><p>修饰符</p>
-<p>|             | 当前类 | 同一包内 | 子孙类 | 其他包 |                         其他包子孙类                         |<br>| ———– | :—-: | :——: | :—-: | :—-: | :———————————————————-: |<br>| <code>public</code>    |   Y    |    Y     |   Y    |   Y    |                              Y                               |<br>| <code>protected</code> |   Y    |    Y     |   Y    |   N    | Y/N（<a href="http://www.runoob.com/java/java-modifier-types.html#protected-desc" target="_blank" rel="noopener">说明</a>） |<br>| <code>default</code>   |   Y    |    Y     |   N    |   N    |                              N                               |<br>| <code>private</code>   |   Y    |    N     |   N    |   N    |                              N                               |</p>
-</li>
+<li>修饰符</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:center">当前类</th>
+<th style="text-align:center">同一包内</th>
+<th style="text-align:center">子孙类</th>
+<th style="text-align:center">其他包</th>
+<th style="text-align:center">其他包子孙类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>public</code></td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">Y</td>
+</tr>
+<tr>
+<td><code>protected</code></td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">Y/N（<a href="http://www.runoob.com/java/java-modifier-types.html#protected-desc" target="_blank" rel="noopener">说明</a>）</td>
+</tr>
+<tr>
+<td><code>default</code></td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">N</td>
+</tr>
+<tr>
+<td><code>private</code></td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">N</td>
+</tr>
+</tbody>
+</table>
+<ul>
 <li><p>接口里的变量都隐式声明为 <strong>public static final</strong>，而接口里的方法默认情况下访问权限为 <strong>public</strong>。</p>
 </li>
 <li><p>类和接口不能声明为 <strong>private</strong>。</p>
@@ -473,15 +519,15 @@ java中默认声明的小数是do">
 <span class="token keyword">boolean</span> result <span class="token operator">=</span> name <span class="token keyword">instanceof</span> <span class="token class-name">String</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 由于 name 是 String 类型，所以返回真</span>
 </code></pre>
 <ul>
-<li><p>条件运算符（? : ）顺序：从右到左</p>
+<li>条件运算符（? : ）顺序：从右到左</li>
+</ul>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">?</span> <span class="token number">2</span> <span class="token operator">:</span> <span class="token number">3</span> <span class="token operator">?</span> <span class="token number">4</span> <span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">;</span> 
 <span class="token comment" spellcheck="true">// 如果从左到右结合，即a = (1 ? 2 : 3) ? 4 : 5 = 2 ? 4 : 5 = 4; </span>
 <span class="token comment" spellcheck="true">// 如果从右到左结合，即a = 1 ? 2 : (3 ? 4 : 5) = 1 ? 2 : 4 = 2; </span>
 <span class="token comment" spellcheck="true">// 实际运行int a = 1 ? 2 : 3 ? 4 : 5;得到a=2;即条件运算符是从右到左结合的。</span>
 </code></pre>
-</li>
-<li><p>Java 增强 for 循环</p>
-</li>
+<ul>
+<li>Java 增强 for 循环</li>
 </ul>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> numbers <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">40</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> x <span class="token operator">:</span> numbers <span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -536,15 +582,11 @@ java中默认声明的小数是do">
 <li>由于 StringBuilder 相较于 StringBuffer 有速度优势，所以多数情况下建议使用 StringBuilder 类。然而在应用程序要求线程安全的情况下，则必须使用 StringBuffer 类。</li>
 </ul>
 <h3 id="Java-数组"><a href="#Java-数组" class="headerlink" title="Java 数组"></a>Java 数组</h3><ul>
-<li><p>声明数组变量</p>
-<ul>
-<li><pre class=" language-java"><code class="language-java">dataType<span class="token punctuation">[</span><span class="token punctuation">]</span> arrayRefVar<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 首选的方法</span>
+<li>声明数组变量</li>
+</ul>
+<pre class=" language-java"><code class="language-java">dataType<span class="token punctuation">[</span><span class="token punctuation">]</span> arrayRefVar<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 首选的方法</span>
 dataType arrayRefVar<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 效果相同，但不是首选方法</span>
 </code></pre>
-</li>
-</ul>
-</li>
-</ul>
 <h3 id="foreach-循环"><a href="#foreach-循环" class="headerlink" title="foreach 循环"></a>foreach 循环</h3><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 打印所有数组元素</span>
 <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">double</span> element<span class="token operator">:</span> myList<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span><span class="token punctuation">;</span>
