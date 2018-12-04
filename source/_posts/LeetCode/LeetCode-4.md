@@ -34,7 +34,7 @@ mathjax: true
 
 ## 解决方法:
 
-![LeetCode4](/images/LeetCode4.png)
+![LeetCode4](../../images/LeetCode4.png)
 
 ### 主要思路：
 
