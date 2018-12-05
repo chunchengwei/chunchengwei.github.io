@@ -28,6 +28,7 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+  - googled64f1ed97748102e.html
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -106,3 +107,7 @@ feed:
   content_limit: 140
   content_limit_delim: ' '
   order_by: -date
+
+# 自动生成sitemap
+sitemap:
+  path: sitemap.xml
