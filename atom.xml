@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://chunchengwei.github.io/"/>
-  <updated>2018-12-07T14:27:43.000Z</updated>
+  <updated>2018-12-07T16:25:52.000Z</updated>
   <id>https://chunchengwei.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何修改Hexo主题</title>
+    <link href="https://chunchengwei.github.io/ruan-jian/ru-he-xiu-gai-hexo-zhu-ti/"/>
+    <id>https://chunchengwei.github.io/ruan-jian/ru-he-xiu-gai-hexo-zhu-ti/</id>
+    <published>2018-12-07T14:42:40.000Z</published>
+    <updated>2018-12-07T16:25:52.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;这几天使用hexo-theme-matery的主题搭建Blog时，发现主题的很多设计不是很喜欢。所以就想自己动手改一下，于是也就有了这篇博客。在讲修改之前先说一下如果你和我一样也是0基础，却想要修改别人的主题，要做哪些准备。&lt;/p&gt;
+&lt;h2 id=&quot;准备工作：&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="软件" scheme="https://chunchengwei.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+      <category term="hexo" scheme="https://chunchengwei.github.io/tags/hexo/"/>
+    
+      <category term="html" scheme="https://chunchengwei.github.io/tags/html/"/>
+    
+      <category term="css" scheme="https://chunchengwei.github.io/tags/css/"/>
+    
+      <category term="js" scheme="https://chunchengwei.github.io/tags/js/"/>
+    
+  </entry>
   
   <entry>
     <title>基于Docker的Hexo博客搭建</title>
@@ -351,9 +384,9 @@
       <category term="软件" scheme="https://chunchengwei.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
     
     
-      <category term="SciPy" scheme="https://chunchengwei.github.io/tags/SciPy/"/>
-    
       <category term="Python" scheme="https://chunchengwei.github.io/tags/Python/"/>
+    
+      <category term="SciPy" scheme="https://chunchengwei.github.io/tags/SciPy/"/>
     
   </entry>
   
