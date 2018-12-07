@@ -366,7 +366,7 @@ The medi">
 <p>The median is (2 + 3)/2 = 2.5</p>
 </blockquote>
 <h6 id="补充说明："><a href="#补充说明：" class="headerlink" title="补充说明："></a>补充说明：</h6><p><strong>中位数：</strong>是在一组数据中居于中间的数(特别注意的地方是：这组数据之前已经经过升序排列！！！)，即在这组数据中，有一半的数据比它大，有一半的数据比它小。如果这组数据包含偶数个数字，中值是位于中间的两个数的平均值。</p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法:"></a>解决方法:</h2><p><img src="../../images/LeetCode4.png" alt="LeetCode4"></p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法:"></a>解决方法:</h2><p><img src="../../images/LeetCode4.jpg" alt="LeetCode4"></p>
 <h3 id="主要思路："><a href="#主要思路：" class="headerlink" title="主要思路："></a>主要思路：</h3><p>如上图所示，想要找到两个数组合并后的中位数，即寻找 $C_{k-1}$ 和 $C_k$ 的值，即找到合并后数组的第K个元素。</p>
 <h4 id="思路1："><a href="#思路1：" class="headerlink" title="思路1："></a>思路1：</h4><p>依次从数组nums1和nums2数组的头部弹出较小的值，直到找到第K个元素。这种算法的时间复杂度为 $O(m+n)$。</p>
 <h4 id="思路2："><a href="#思路2：" class="headerlink" title="思路2："></a>思路2：</h4><p>假设从nums1中取出前m1个元素，nums2中取出前m2个元素，共同组成合并后数组的前k个元素。当：</p>
