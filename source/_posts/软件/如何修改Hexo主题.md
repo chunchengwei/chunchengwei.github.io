@@ -90,6 +90,12 @@ css定义了HTML中的元素的样式。CSS规则主要由两部分组成：选�
 
 还有一种情况，即多个元素用同样的格式，此时用逗号分隔即可。
 
+#### 3. CSS 实例
+
+下面有链接里有很多实例，通过实例可以更快的了解css、js、html是如何一起工作的。
+
+[菜鸟教程 | CSS实例](http://www.runoob.com/css/css-examples.html)
+
 ### JS知识点：
 
 通过上面的js的教程，你会发现 js和 c的语法真的很像。所以如果你会c的语法，那么基本上可以看懂js的代码。
@@ -134,6 +140,8 @@ EJS 是一套简单的模板语言，帮你利用普通的 JavaScript 代码生�
 * [菜鸟教程 | CSS](http://www.runoob.com/css/css-tutorial.html)
 * [菜鸟教程| JavaScript](http://www.runoob.com/js/js-tutorial.html)
 * [菜鸟教程 | HTML 速查列表](http://www.runoob.com/html/html-quicklist.html)
+* [菜鸟教程 | CSS实例](http://www.runoob.com/css/css-examples.html)
 * [EJS 官网](https://ejs.bootcss.com)
 
 今天先写到这里。之后我会讲一下，对于hexo-theme-matery主题，我做了哪些修改，供大家参考。以上如果有不正确或不清楚的地方，欢迎指正。
+
