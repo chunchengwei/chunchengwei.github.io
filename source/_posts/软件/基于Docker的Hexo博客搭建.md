@@ -164,7 +164,7 @@ INFO  Start processing
 INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.
 ```
 
-![Screen Shot 2018-12-04 at 9.52.08 PM](../../images/Screen Shot 2018-12-04 at 9.52.08 PM.png)
+![hexo](../../images/hexo.jpg)
 
 ## 3. 使用hexo-theme-matery主题
 
