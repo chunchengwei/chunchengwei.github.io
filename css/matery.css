@@ -6,6 +6,13 @@
     }
 }
 
+/* 特例修改小屏幕下文章详情table样式*/
+@media only screen and (max-width: 533px) {
+    #articleContent table{
+        table-layout: fixed;
+    }
+}
+
 /*中等屏幕下(平板类)的样式*/
 @media only screen and (min-width: 600px) and (max-width: 992px) {
     .container {
@@ -123,6 +130,7 @@ pre[class*="language-"] {
 code[class*="language-"],
 pre[class*="language-"] {
     color: #e8eaf6;
+    white-space: pre-wrap !important;
 }
 
 b,
@@ -154,6 +162,11 @@ mark {
 
 .card .card-image img {
     border-radius: 5px 5px 0 0;
+}
+
+.card .card-title {
+    font-size: 1.4rem;
+    font-weight: 400;
 }
 
 .container .row {
@@ -304,7 +317,7 @@ header .side-nav .social-link {
 .cover-btns a:hover {
     border: 1px solid #f44336;
     background-color: #f44336;
-    box-shadow: 0 14px 26px -12px rgba(233, 30, 99, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(233, 30, 99, 0.2);
+    box-shadow: 0 14px 26px -12px rgba(233, 30, 99, 0.42), 0 4px 23px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(233, 30, 99, 0.2);
 }
 
 .cover-btns a i {
@@ -676,7 +689,7 @@ article .card {
 }
 
 article .card-image img {
-    height: 220px;
+    height: 175px;
     border-radius: 0.3rem;
 }
 
@@ -772,6 +785,11 @@ article .article-tags .chip {
 
 .paging .disabled i {
     color: #999 !important;
+}
+
+.summary {
+    height: 46px;
+    overflow: hidden;
 }
 
 /*文章详情样式*/
@@ -1181,6 +1199,25 @@ table tr:nth-child(2n), thead {
         -moz-animation: cd-bounce-1 0.6s;
         animation: cd-bounce-1 0.6s;
     }
+}
+
+.cd-timeline-content .card a.card-title-bar {
+    text-decoration: none;
+}
+
+.cd-timeline-content .card .card-title {
+    font-family: Times, "Times New Roman", serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 22px;
+    color: #fff;
+
+    border-radius: 5px;
+    padding: 15px 15px 12px 18px;
+
+    background-image: url(/medias/backgroundimages/brick-wall.png);
+    background-color: #00256e;
 }
 
 .cd-timeline-content {
