@@ -232,7 +232,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                     <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
                         
 <div class="statis">
-    <span class="count"><a href="/" target="_blank">16</a></span>
+    <span class="count"><a href="/" target="_blank">17</a></span>
     <span class="name">文章</span>
 </div>
 
@@ -246,7 +246,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
 
 <div class="statis">
-    <span class="count"><a href="/tags" target="_blank">21</a></span>
+    <span class="count"><a href="/tags" target="_blank">22</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -260,7 +260,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                                 <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
                                     
 <div class="statis">
-    <span class="count"><a href="/" target="_blank">16</a></span>
+    <span class="count"><a href="/" target="_blank">17</a></span>
     <span class="name">文章</span>
 </div>
 
@@ -274,7 +274,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
 
 <div class="statis">
-    <span class="count"><a href="/tags" target="_blank">21</a></span>
+    <span class="count"><a href="/tags" target="_blank">22</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -381,7 +381,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,0,0,0,0,0,16],
+                data: [0,0,0,0,0,0,0,0,0,0,0,0,17],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -423,7 +423,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"AI","value":1},{"name":"刷题","value":5},{"name":"软件","value":8},{"name":"算法","value":2}],
+                data: [{"name":"算法","value":2},{"name":"AI","value":1},{"name":"刷题","value":6},{"name":"软件","value":8}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -447,7 +447,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
         xAxis: [
             {
                 type: 'category',
-                data: ["LeetCode","Python","面试题","C++","DP","SQL","pandas","SciPy","二分法","numpy"]
+                data: ["LeetCode","Python","面试题","SQL","差分","动态规划","NN","二分法","pandas","SciPy"]
             }
         ],
         yAxis: [
@@ -460,7 +460,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [3,3,2,1,1,1,1,1,1,1],
+                data: [4,3,2,1,1,1,1,1,1,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
@@ -615,6 +615,12 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
         <div class="tag-chips center-align">
             
             
+            <a href="/tags/差分/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">差分</span>
+            </a>
+            
+            
+            
             <a href="/tags/DP/" target="_blank">
                 <span class="chip center-align waves-effect waves-light chip-default">DP</span>
             </a>
@@ -627,14 +633,20 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             
             
+            <a href="/tags/Minimization/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">Minimization</span>
+            </a>
+            
+            
+            
             <a href="/tags/LeetCode/" target="_blank">
                 <span class="chip center-align waves-effect waves-light chip-default">LeetCode</span>
             </a>
             
             
             
-            <a href="/tags/二分法/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">二分法</span>
+            <a href="/tags/动态规划/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">动态规划</span>
             </a>
             
             
@@ -644,6 +656,10 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             </a>
             
             
+            
+            <a href="/tags/二分法/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">二分法</span>
+            </a>
             
             
             
@@ -665,14 +681,16 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             
             
-            <a href="/tags/numpy/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">numpy</span>
-            </a>
-            
             
             
             <a href="/tags/C/" target="_blank">
                 <span class="chip center-align waves-effect waves-light chip-default">C++</span>
+            </a>
+            
+            
+            
+            <a href="/tags/numpy/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">numpy</span>
             </a>
             
             
@@ -697,18 +715,6 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             <a href="/tags/js/" target="_blank">
                 <span class="chip center-align waves-effect waves-light chip-default">js</span>
-            </a>
-            
-            
-            
-            <a href="/tags/差分/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">差分</span>
-            </a>
-            
-            
-            
-            <a href="/tags/Minimization/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">Minimization</span>
             </a>
             
             
