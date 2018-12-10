@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://chunchengwei.github.io/"/>
-  <updated>2018-12-08T17:24:12.000Z</updated>
+  <updated>2018-12-10T14:42:43.000Z</updated>
   <id>https://chunchengwei.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>遍历二叉树</title>
+    <link href="https://chunchengwei.github.io/suan-fa/bian-li-er-cha-shu/"/>
+    <id>https://chunchengwei.github.io/suan-fa/bian-li-er-cha-shu/</id>
+    <published>2018-12-10T12:49:13.000Z</published>
+    <updated>2018-12-10T14:42:43.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;二叉树的知识点及遍历方法整理。&lt;/p&gt;
+&lt;h2 id=&quot;1-什么是二叉树？&quot;&gt;&lt;a href=&quot;#1-什么是二叉树？&quot; class=&quot;headerlink&quot; title=&quot;1. 什么是二叉树？&quot;&gt;&lt;/a&gt;1.
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://chunchengwei.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="二叉树" scheme="https://chunchengwei.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    
+  </entry>
   
   <entry>
     <title>LeetCode 85</title>
