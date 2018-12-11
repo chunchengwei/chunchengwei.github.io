@@ -5,15 +5,13 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="遍历二叉树, 石锅拌饭, chwei">
-    <meta name="description" content="二叉树的知识点及遍历方法整理。
-1. 什么是二叉树？
-二叉树是每个结点最多有两个分支的树结构。通常被称作“左子树”和“右子树”。二叉树的分支具有左右次序，不能随意颠倒。
+    <meta name="keywords" content="给定二叉树前序、中序、后续遍历其中两种，构造二叉树, 石锅拌饭, chwei">
+    <meta name="description" content="给定二叉树的前序、中序、后续遍历其中两种，如何构造二叉树？
+1. 给定前序、中序遍历
+In-order: F, B, A, E, H, C, D, I, G
+Pre-order: H, B, F, E, A, C, D, G, I
 
-2. 二叉树种类2.1 斜树
-所有节点只有左子树，或者右子树。
-
-2">
+由于前">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +19,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>遍历二叉树 | 石锅拌饭</title>
+    <title>给定二叉树前序、中序、后续遍历其中两种，构造二叉树 | 石锅拌饭</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -199,13 +197,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        遍历二叉树
+                        给定二叉树前序、中序、后续遍历其中两种，构造二叉树
                     </div>
                 </div>
             </div>
@@ -335,70 +333,46 @@
                 
 
                 <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2018-12-10
+                    <i class="fa fa-clock-o fa-fw"></i>2018-12-11
                 </span>
             </div>
         </div>
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>二叉树的知识点及遍历方法整理。</p>
-<h2 id="1-什么是二叉树？"><a href="#1-什么是二叉树？" class="headerlink" title="1. 什么是二叉树？"></a>1. 什么是二叉树？</h2><blockquote>
-<p>二叉树是每个结点最多有两个分支的树结构。通常被称作“左子树”和“右子树”。二叉树的分支具有左右次序，不能随意颠倒。</p>
+                <p>给定二叉树的前序、中序、后续遍历其中两种，如何构造<a href="/suan-fa/bian-li-er-cha-shu/" title="二叉树">二叉树</a>？</p>
+<h2 id="1-给定前序、中序遍历"><a href="#1-给定前序、中序遍历" class="headerlink" title="1. 给定前序、中序遍历"></a>1. 给定前序、中序遍历</h2><blockquote>
+<p>In-order: F, B, A, E, H, C, D, I, G</p>
+<p>Pre-order: H, B, F, E, A, C, D, G, I</p>
 </blockquote>
-<h2 id="2-二叉树种类"><a href="#2-二叉树种类" class="headerlink" title="2. 二叉树种类"></a>2. 二叉树种类</h2><h3 id="2-1-斜树"><a href="#2-1-斜树" class="headerlink" title="2.1 斜树"></a>2.1 斜树</h3><blockquote>
-<p>所有节点只有左子树，或者右子树。</p>
+<p>由于前序遍历最先访问根节点。可以确定H为根节点。而中序遍历的顺序为：左子树、根、右子树。所以可以确定中序遍历中，H前面的所有元素构成左子树。后面的所有元素构成右子树。由此可以做如下划分：</p>
+<blockquote>
+<p>In-order: <font color="blue">F, B, A, E, </font><font color="red">H, </font><font color="green">C, D, I, G</font></p>
+<p>Pre-order: <font color="red">H, </font><font color="blue">B, F, E, A, </font><font color="green">C, D, G, I</font></p>
 </blockquote>
-<h3 id="2-2-满二叉树"><a href="#2-2-满二叉树" class="headerlink" title="2.2 满二叉树"></a>2.2 满二叉树</h3><blockquote>
-<p>一个二叉树，如果每一个层的结点数都达到最大值，则这个二叉树就是满二叉树。</p>
+<p>其中<font color="red">红色</font>为根节点、<font color="blue">蓝色</font>为左子树、<font color="green">绿色</font>为右子树。</p>
+<p>然后递归的对左子树和右子树做同样的操作。最终构建的二叉树为：</p>
+<p><img src="../../images/Screen Shot 2018-12-11 at 10.52.56 AM.jpg" alt="Screen Shot 2018-12-11 at 10.52.56 AM"></p>
+<hr>
+<p>同理，给定其他遍历顺序时，颜色划分如下。</p>
+<h2 id="2-给定后序、中序遍历"><a href="#2-给定后序、中序遍历" class="headerlink" title="2. 给定后序、中序遍历"></a>2. 给定后序、中序遍历</h2><blockquote>
+<p>In-order: <font color="blue">F, B, A, E, </font><font color="red">H, </font><font color="green">C, D, I, G</font></p>
+<p>Post-order: <font color="blue">F, A, E, B, </font><font color="green">I, G, D, C, </font><font color="red">H</font></p>
 </blockquote>
-<h3 id="2-3-完全二叉树"><a href="#2-3-完全二叉树" class="headerlink" title="2.3 完全二叉树"></a>2.3 完全二叉树</h3><blockquote>
-<p>除了最后一层允许填不满外，其他层均填满。而且最后一层靠左填充。</p>
+<h2 id="3-给定前序、后序遍历"><a href="#3-给定前序、后序遍历" class="headerlink" title="3. 给定前序、后序遍历"></a>3. 给定前序、后序遍历</h2><blockquote>
+<p>Pre-order: <font color="red">H, </font>B, F, E, A, C, D, G, I</p>
+<p>Post-order: F, A, E, B, I, G, D, C, <font color="red">H</font></p>
 </blockquote>
-<p><img src="../../images/CompleteBinary.jpg" alt="CompleteBinary"></p>
-<h2 id="3-二叉树性质"><a href="#3-二叉树性质" class="headerlink" title="3. 二叉树性质"></a>3. 二叉树性质</h2><ol>
-<li>二叉树第i层，节点数目最多为$2^{i-1}$</li>
-<li>任意一颗二叉树，若叶节点为n，度为2的接单树为m，则n = m + 1</li>
-<li>深度为h的满二叉树，节点数为$2^h-1$。 由该点引申的性质：<ul>
-<li>深度为h的二叉树，最多有$2^h-1$个节点</li>
-<li>具有n个节点的满二叉树，深度为$\log_2^{n + 1}$</li>
-<li>包含n个节点的二叉树，高度至少为$[\log_2^{n+1}]$，[ ]为向下取整</li>
-</ul>
-</li>
-<li>完全二叉树，从上到下从左到右依次编号。若某节点编号为k，则其左右子树根节点编号分别为2k和2k + 1（证明提示，每一行的起点的编号为$2^{i - 1}$）</li>
-</ol>
-<h2 id="4-遍历二叉树"><a href="#4-遍历二叉树" class="headerlink" title="4. 遍历二叉树"></a>4. 遍历二叉树</h2><blockquote>
-<p>二叉树，有深度遍历和广度遍历。深度遍历有前序、中序以及后序三种遍历方法，广度遍历即我们寻常所说的层次遍历。</p>
-<p>由于树的定义本身就是递归定义，因此采用递归的方法去实现树的三种遍历不仅实现简单并且易于理解。而对于广度遍历来说，须要其他数据结构的支撑，比如堆。</p>
+<p>这种情况下，我们首先能判断根节点是<font color="red">H</font>，接下来是如何判断左右子树。</p>
+<p>由于后序遍历最后访问根节点。所以根节点之前的所有元素，构成了以该点为根的子树。通过先序遍历，我们知道B是左子树的根节点。在后序遍历中找到B，那么B前面的所有节点即为左子树。因此我们就找到了左右子树。如下：</p>
+<blockquote>
+<p>Pre-order: <font color="red">H, </font><font color="blue">B, F, E, A, </font><font color="green">C, D, G, I</font></p>
+<p>Post-order: <font color="blue">F, A, E, B, </font><font color="green">I, G, D, C, </font><font color="red">H</font></p>
 </blockquote>
-<h3 id="4-1-前序遍历："><a href="#4-1-前序遍历：" class="headerlink" title="4.1 前序遍历："></a>4.1 前序遍历：</h3><blockquote>
-<ol>
-<li>访问根节点</li>
-<li>前序遍历左子树</li>
-<li>前序遍历右子树</li>
-</ol>
-</blockquote>
-<p><img src="../../images/20180223122131558.png" alt="20180223122131558"></p>
-<h3 id="4-2-中序遍历："><a href="#4-2-中序遍历：" class="headerlink" title="4.2 中序遍历："></a>4.2 中序遍历：</h3><blockquote>
-<ol>
-<li>中序遍历左子树</li>
-<li>访问根节点</li>
-<li>中序遍历右子树</li>
-</ol>
-</blockquote>
-<p><img src="../../images/20180223122302320.png" alt="20180223122302320"></p>
-<h3 id="4-3-后序遍历："><a href="#4-3-后序遍历：" class="headerlink" title="4.3 后序遍历："></a>4.3 后序遍历：</h3><blockquote>
-<ol>
-<li>后续遍历左子树</li>
-<li>后续遍历右子树</li>
-<li>访问根节点</li>
-</ol>
-</blockquote>
-<p><img src="../../images/20180223122410506.png" alt="20180223122410506"></p>
-<h3 id="4-4-层序遍历："><a href="#4-4-层序遍历：" class="headerlink" title="4.4 层序遍历："></a>4.4 层序遍历：</h3><blockquote>
-<p>从上到下，从左到右，依次访问</p>
-</blockquote>
-<p><img src="../../images/Screen Shot 2018-12-10 at 10.30.03 PM.png" alt="Screen Shot 2018-12-10 at 10.30.03 PM"></p>
+<p>对左右子树进行同样的操作，即可得到整个树。</p>
+<hr>
+<p><strong>后记：</strong></p>
+<p>遇到给定二叉树的两种遍历序列后，求第三种遍历序列都可以用上述的方法，先构建出树。再给出另外一种遍历序列。</p>
 
             </div>
             <hr>
@@ -537,7 +511,7 @@
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="https://chunchengwei.github.io" class="b-link-green">石锅拌饭</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/suan-fa/bian-li-er-cha-shu/" class="b-link-green">遍历二叉树</a>
+                    <a href="/suan-fa/gei-ding-er-cha-shu-qian-xu-zhong-xu-hou-xu-bian-li-qi-zhong-liang-chong-gou-zao-er-cha-shu/" class="b-link-green">给定二叉树前序、中序、后续遍历其中两种，构造二叉树</a>
                 </p>
             </div>
         </div>
@@ -559,7 +533,7 @@
         repo: 'chunchengwei.github.io',
         owner: 'chunchengwei',
         admin: ["chunchengwei"],
-        id: '2018-12-10T12-49-13',
+        id: '2018-12-11T01-56-00',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -581,7 +555,7 @@
     <div class="row article-row">
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="article-badge left-badge text-color">本篇</div>
             <div class="card">
                 <a href="/suan-fa/gei-ding-er-cha-shu-qian-xu-zhong-xu-hou-xu-bian-li-qi-zhong-liang-chong-gou-zao-er-cha-shu/">
                     <div class="card-image">
@@ -600,9 +574,60 @@ Pre-order: H, B, F, E, A, C, D, G, I
 
 由于前</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-11
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-11
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/算法/" class="post-category" target="_blank">
+                                    算法
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/二叉树/" target="_blank">
+                        <span class="chip bg-color">二叉树</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">下一篇</div>
+            <div class="card">
+                <a href="/suan-fa/bian-li-er-cha-shu/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="遍历二叉树">
+                        
+                        <span class="card-title">遍历二叉树</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">二叉树的知识点及遍历方法整理。
+1. 什么是二叉树？
+二叉树是每个结点最多有两个分支的树结构。通常被称作“左子树”和“右子树”。二叉树的分支具有左右次序，不能随意颠倒。
+
+2. 二叉树种类2.1 斜树
+所有节点只有左子树，或者右子树。
+
+2</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -620,58 +645,6 @@ Pre-order: H, B, F, E, A, C, D, G, I
                     
                     <a href="/tags/二叉树/" target="_blank">
                         <span class="chip bg-color">二叉树</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">下一篇</div>
-            <div class="card">
-                <a href="/leetcode/leetcode-85/">
-                    <div class="card-image">
-                        
-                        <img src="http://static.blinkfox.com/hexoblog_20180925_sql.jpg" class="responsive-img" alt="LeetCode 85">
-                        
-                        <span class="card-title">LeetCode 85</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary">问题描述：给定一个只包含0和1的二维数组，找到只包含1的最大矩形。
-例子：
-Input:
-[
-  ["1","0","1","0","0"],
-  ["1","0","1","1","1"],
-  ["1","1","1","1","1"]</div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-08
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/刷题/" class="post-category" target="_blank">
-                                    刷题
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/LeetCode/" target="_blank">
-                        <span class="chip bg-color">LeetCode</span>
-                    </a>
-                    
-                    <a href="/tags/动态规划/" target="_blank">
-                        <span class="chip bg-color">动态规划</span>
                     </a>
                     
                 </div>
@@ -733,13 +706,6 @@ Input:
 
 </main>
 
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
 
 <footer class="page-footer bg-color">
     <div class="container row center-align">

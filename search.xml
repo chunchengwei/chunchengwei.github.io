@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title>给定二叉树前序、中序、后续遍历其中两种，构造二叉树</title>
+      <link href="/suan-fa/gei-ding-er-cha-shu-qian-xu-zhong-xu-hou-xu-bian-li-qi-zhong-liang-chong-gou-zao-er-cha-shu/"/>
+      <url>/suan-fa/gei-ding-er-cha-shu-qian-xu-zhong-xu-hou-xu-bian-li-qi-zhong-liang-chong-gou-zao-er-cha-shu/</url>
+      
+        <content type="html"><![CDATA[<p>给定二叉树的前序、中序、后续遍历其中两种，如何构造<a href="/suan-fa/bian-li-er-cha-shu/" title="二叉树">二叉树</a>？</p><h2 id="1-给定前序、中序遍历"><a href="#1-给定前序、中序遍历" class="headerlink" title="1. 给定前序、中序遍历"></a>1. 给定前序、中序遍历</h2><blockquote><p>In-order: F, B, A, E, H, C, D, I, G</p><p>Pre-order: H, B, F, E, A, C, D, G, I</p></blockquote><p>由于前序遍历最先访问根节点。可以确定H为根节点。而中序遍历的顺序为：左子树、根、右子树。所以可以确定中序遍历中，H前面的所有元素构成左子树。后面的所有元素构成右子树。由此可以做如下划分：</p><blockquote><p>In-order: <font color="blue">F, B, A, E, </font><font color="red">H, </font><font color="green">C, D, I, G</font></p><p>Pre-order: <font color="red">H, </font><font color="blue">B, F, E, A, </font><font color="green">C, D, G, I</font></p></blockquote><p>其中<font color="red">红色</font>为根节点、<font color="blue">蓝色</font>为左子树、<font color="green">绿色</font>为右子树。</p><p>然后递归的对左子树和右子树做同样的操作。最终构建的二叉树为：</p><p><img src="../../images/Screen Shot 2018-12-11 at 10.52.56 AM.jpg" alt="Screen Shot 2018-12-11 at 10.52.56 AM"></p><hr><p>同理，给定其他遍历顺序时，颜色划分如下。</p><h2 id="2-给定后序、中序遍历"><a href="#2-给定后序、中序遍历" class="headerlink" title="2. 给定后序、中序遍历"></a>2. 给定后序、中序遍历</h2><blockquote><p>In-order: <font color="blue">F, B, A, E, </font><font color="red">H, </font><font color="green">C, D, I, G</font></p><p>Post-order: <font color="blue">F, A, E, B, </font><font color="green">I, G, D, C, </font><font color="red">H</font></p></blockquote><h2 id="3-给定前序、后序遍历"><a href="#3-给定前序、后序遍历" class="headerlink" title="3. 给定前序、后序遍历"></a>3. 给定前序、后序遍历</h2><blockquote><p>Pre-order: <font color="red">H, </font>B, F, E, A, C, D, G, I</p><p>Post-order: F, A, E, B, I, G, D, C, <font color="red">H</font></p></blockquote><p>这种情况下，我们首先能判断根节点是<font color="red">H</font>，接下来是如何判断左右子树。</p><p>由于后序遍历最后访问根节点。所以根节点之前的所有元素，构成了以该点为根的子树。通过先序遍历，我们知道B是左子树的根节点。在后序遍历中找到B，那么B前面的所有节点即为左子树。因此我们就找到了左右子树。如下：</p><blockquote><p>Pre-order: <font color="red">H, </font><font color="blue">B, F, E, A, </font><font color="green">C, D, G, I</font></p><p>Post-order: <font color="blue">F, A, E, B, </font><font color="green">I, G, D, C, </font><font color="red">H</font></p></blockquote><p>对左右子树进行同样的操作，即可得到整个树。</p><hr><p><strong>后记：</strong></p><p>遇到给定二叉树的两种遍历序列后，求第三种遍历序列都可以用上述的方法，先构建出树。再给出另外一种遍历序列。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 二叉树 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>遍历二叉树</title>
       <link href="/suan-fa/bian-li-er-cha-shu/"/>
       <url>/suan-fa/bian-li-er-cha-shu/</url>

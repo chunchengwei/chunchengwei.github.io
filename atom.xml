@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://chunchengwei.github.io/"/>
-  <updated>2018-12-10T14:47:18.000Z</updated>
+  <updated>2018-12-11T03:55:59.000Z</updated>
   <id>https://chunchengwei.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>给定二叉树前序、中序、后续遍历其中两种，构造二叉树</title>
+    <link href="https://chunchengwei.github.io/suan-fa/gei-ding-er-cha-shu-qian-xu-zhong-xu-hou-xu-bian-li-qi-zhong-liang-chong-gou-zao-er-cha-shu/"/>
+    <id>https://chunchengwei.github.io/suan-fa/gei-ding-er-cha-shu-qian-xu-zhong-xu-hou-xu-bian-li-qi-zhong-liang-chong-gou-zao-er-cha-shu/</id>
+    <published>2018-12-11T01:56:00.000Z</published>
+    <updated>2018-12-11T03:55:59.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;给定二叉树的前序、中序、后续遍历其中两种，如何构造&lt;a href=&quot;/suan-fa/bian-li-er-cha-shu/&quot; title=&quot;二叉树&quot;&gt;二叉树&lt;/a&gt;？&lt;/p&gt;
+&lt;h2 id=&quot;1-给定前序、中序遍历&quot;&gt;&lt;a href=&quot;#1-给定前序、中序遍历&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://chunchengwei.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="二叉树" scheme="https://chunchengwei.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    
+  </entry>
   
   <entry>
     <title>遍历二叉树</title>
