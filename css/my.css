@@ -2,3 +2,9 @@
 pre {
     background-color: #263238 !important;
 }
+
+#articleContent hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px dashed #ddd;
+}
