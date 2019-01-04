@@ -49,7 +49,9 @@ Pre-order: H, B, F, E, A, C, D, G, I
                         <span class="logo-span">石锅拌饭</span>
                     </a>
                 </div>
-                <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="fa fa-navicon"></i></a>
+                
+
+<a href="#" data-activates="mobile-nav" class="button-collapse"><i class="fa fa-navicon"></i></a>
 <ul class="right">
     
     <li class="hide-on-med-and-down">
@@ -127,6 +129,8 @@ Pre-order: H, B, F, E, A, C, D, G, I
             
         </div>
     </div>
+
+    
 
     <ul class="menu-list mobile-menu-list">
         
@@ -341,6 +345,7 @@ Pre-order: H, B, F, E, A, C, D, G, I
             <div class="post-info">
                 
                 <span class="post-cate">
+                <!--<span class="post-cate" style="margin-right: 0px">-->
                     <i class="fa fa-bookmark fa-fw icon-category"></i>
                     
                     <a href="/categories/算法/" class="post-category" target="_blank">
@@ -353,7 +358,12 @@ Pre-order: H, B, F, E, A, C, D, G, I
                 <span class="post-date">
                     <i class="fa fa-calendar fa-fw"></i>2018-12-11
                 </span>
-            </div>
+				
+				
+                    <span id="busuanzi_container_page_pv" class="post-read">
+                    <i class="fa fa-eye fa-fw"></i>阅读 <span id="busuanzi_value_page_pv"></span>
+				
+            </span></div>
         </div>
         <hr>
         <div class="card-content article-card-content">
@@ -735,8 +745,18 @@ Pre-order: H, B, F, E, A, C, D, G, I
             &copy;<a href="https://chunchengwei.github.io" target="_blank">Chuncheng Wei</a> 2018 |
             <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 |
             <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a> 主题
+            
+			
+                <br>
+                <span id="busuanzi_container_site_pv">
+                    本站总访问量 <span id="busuanzi_value_site_pv" style="color: #fff;"></span> 次,&nbsp;
+                </span>
+				<span id="busuanzi_container_site_uv">
+                    访客数 <span id="busuanzi_value_site_uv" style="color: #fff;"></span> 人.
+                </span>
+			
         </div>
-        <div class="col s12 m4 l4 social-link"><a href="https://github.com/chunchengwei" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <div class="col s12 m4 l4 social-link social-statis"><a href="https://github.com/chunchengwei" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
     <i class="fa fa-github"></i>
 </a>
 <a href="mailto:weicc1989@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
@@ -785,8 +805,8 @@ Pre-order: H, B, F, E, A, C, D, G, I
 <script src="/libs/aos/aos.js"></script>
 <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
 <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
-
 <script src="/js/matery.js"></script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112504491-1"></script>
@@ -799,6 +819,11 @@ Pre-order: H, B, F, E, A, C, D, G, I
     gtag('js', new Date());
     gtag('config', 'UA-112504491-1');
 </script>
+
+
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
 </body>
