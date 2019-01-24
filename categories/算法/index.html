@@ -105,7 +105,7 @@
     
     <li>
         <a id="toggleSearch" class="waves-effect waves-light">
-            <i id="searchIcon" class="mdi-action-search"></i>
+            <i id="searchIcon" class="mdi-action-search" title="搜索"></i>
         </a>
     </li>
 
@@ -245,23 +245,25 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 <div id="category-cloud" class="container chip-container">
     <div class="card">
         <div class="card-content">
-            <div class="tag-title center-align">文章分类</div>
+            <div class="tag-title center-align">
+                <i class="fa fa-bookmark"></i>&nbsp;&nbsp;文章分类
+            </div>
             <div class="tag-chips">
                 
                 
                 
-                <a href="/categories/刷题/" title="刷题: 6">
+                <a href="/categories/AI/" title="AI: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default " style="background-color: #F9EBEA;">刷题
-                        <span class="tag-length">6</span>
+                             chip-default " style="background-color: #F9EBEA;">AI
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/AI/" title="AI: 1">
+                <a href="/categories/刷题/" title="刷题: 6">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default " style="background-color: #F5EEF8;">AI
-                        <span class="tag-length">1</span>
+                             chip-default " style="background-color: #F5EEF8;">刷题
+                        <span class="tag-length">6</span>
                     </span>
                 </a>
                 
@@ -304,10 +306,13 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                         </div>
                     </a>
                     <div class="card-content article-content">
-                        <div class="summary">给定二叉树的前序、中序、后续遍历其中两种，如何构造二叉树？
+                        <div class="summary">
+                            
+                                给定二叉树的前序、中序、后续遍历其中两种，如何构造二叉树？
 1. 给定前序、中序遍历
-In-order: F, B, A, E, H, C, D, I, G
-P</div>
+In-order: F, B, A, E, H, C,
+                            
+                        </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-calendar fa-fw icon-date"></i>2018-12-11
@@ -349,9 +354,13 @@ P</div>
                         </div>
                     </a>
                     <div class="card-content article-content">
-                        <div class="summary">二叉树的知识点及遍历方法整理。
+                        <div class="summary">
+                            
+                                二叉树的知识点及遍历方法整理。
 1. 什么是二叉树？
-二叉树是每个结点最多有两个分支的树结构。通常被称作“左子树”和“右子树”。二叉树的分支具有左右次序，不能随</div>
+二叉树是每个结点最多有两个分支的树结构。通常被称作“左子树”和“右子树”。二叉树的分支
+                            
+                        </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-calendar fa-fw icon-date"></i>2018-12-10
@@ -393,9 +402,13 @@ P</div>
                         </div>
                     </a>
                     <div class="card-content article-content">
-                        <div class="summary">Five-point stencil 在一维和二维中的形式：
+                        <div class="summary">
+                            
+                                Five-point stencil 在一维和二维中的形式：
 
-在数值分析中，给定一个一维或二维的网格，某一点的 Five-point stencil（FPS）</div>
+在数值分析中，给定一个一维或二维的网格，某一点的 Five-point st
+                            
+                        </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-calendar fa-fw icon-date"></i>2018-12-04
@@ -437,8 +450,12 @@ P</div>
                         </div>
                     </a>
                     <div class="card-content article-content">
-                        <div class="summary">适用于，一维单峰函数搜索最小值或者最大值。
-核心思想：基于函数是一维单峰的特性，通过三个点来判断函数的大致走向，并且可以知道最小值一定落在已知最小点的相邻两点所</div>
+                        <div class="summary">
+                            
+                                适用于，一维单峰函数搜索最小值或者最大值。
+核心思想：基于函数是一维单峰的特性，通过三个点来判断函数的大致走向，并且可以知道最小值一定落在已
+                            
+                        </div>
                         <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-calendar fa-fw icon-date"></i>2018-12-04
@@ -477,19 +494,28 @@ P</div>
 <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
-            &copy;<a href="https://chunchengwei.github.io" target="_blank">Chuncheng Wei</a> 2018 |
+            版权&copy;<a href="https://chunchengwei.github.io" target="_blank">Chuncheng Wei</a> 2018 |
             <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 |
             <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a> 主题
+
             
 			
                 <br>
                 <span id="busuanzi_container_site_pv">
-                    本站总访问量 <span id="busuanzi_value_site_pv" style="color: #fff;"></span> 次,&nbsp;
+                    <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span> 次,&nbsp;
                 </span>
 				<span id="busuanzi_container_site_uv">
-                    访客数 <span id="busuanzi_value_site_uv" style="color: #fff;"></span> 人.
+                    <i class="fa fa-users"></i>
+                    访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
                 </span>
 			
+
+            
+                &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+                <span class="white-color">11.3k</span>
+            
+
         </div>
         <div class="col s12 m4 l4 social-link social-statis"><a href="https://github.com/chunchengwei" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
     <i class="fa fa-github"></i>
@@ -516,7 +542,7 @@ P</div>
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
-            <span class="title">搜索</span>
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
             <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input" autofocus>
         </div>
         <div id="searchResult"></div>

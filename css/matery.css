@@ -175,6 +175,10 @@ mark {
     color: #0f9d58 !important;
 }
 
+.white-color {
+    color: #fff;
+}
+
 /*头部导航栏样式*/
 @media only screen and (max-width: 600px) {
     header nav .brand-logo {
@@ -221,7 +225,7 @@ header .brand-logo .logo-img {
 }
 
 header .brand-logo .logo-span {
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
 header .button-collapse i {
@@ -621,7 +625,7 @@ header .go-back i {
     height: 65px;
     max-height: 65px;
     font-size: 14px;
-    color: hsla(0, 0%, 100%, .7) !important;
+    color: hsla(0, 0%, 100%, .78) !important;
 }
 
 .recommend .post-card .read-more {
@@ -687,7 +691,8 @@ article .card-image img {
 }
 
 article .tag-image img {
-    height: 220px;
+    height: 175px;
+    border-radius: 0.3rem;
 }
 
 article .card .card-content {
@@ -810,22 +815,22 @@ article .article-tags .chip {
     0 2px 5px -5px rgba(0, 0, 0, .1) !important;
 }
 
+#artDetail .tag-cate {
+    padding-bottom: 15px;
+}
+
 #artDetail a {
     margin-right: 0 !important;
     text-transform: none !important;
 }
 
 #artDetail .article-info {
-    padding: 25px 48px 30px 50px;
-    margin-bottom: 20px;
+    padding: 20px 30px 1px 40px;
+    margin-bottom: -5px;
 }
 
 #artDetail .article-tag {
     float: left;
-}
-
-#artDetail .post-info {
-    float: right;
 }
 
 #artDetail .article-tag .chip {
@@ -839,8 +844,22 @@ article .article-tags .chip {
     margin-bottom: 2px;
 }
 
-#artDetail .post-info .post-cate {
-    margin-right: 15px;
+#artDetail .post-cate {
+    float: right;
+    color: #42b983;
+}
+
+#artDetail .post-cate a {
+    padding-right: 5px;
+    color: #42b983;
+    font-weight: 500;
+}
+
+#artDetail .post-cate a:hover {
+    text-decoration: underline;
+}
+
+#artDetail .post-info {
     color: #525f7f;
 }
 
@@ -859,6 +878,10 @@ article .article-tags .chip {
     color: #525f7f;
 }
 
+#artDetail .post-info .post-word-count {
+    margin-left: 15px;
+}
+
 #artDetail .post-info .post-read {
     margin-left: 15px;
     color: #525f7f;
@@ -870,8 +893,8 @@ article .article-tags .chip {
 
 @media only screen and (max-width: 601px) {
     #artDetail .article-info {
-        padding: 25px 15px 30px 18px;
-        margin-bottom: 20px;
+        padding: 15px 15px 1px 15px;
+        margin-bottom: -5px;
     }
 }
 
@@ -881,8 +904,8 @@ article .article-tags .chip {
     }
 
     #artDetail .article-info {
-        padding: 25px 30px 30px 32px;
-        margin-bottom: 20px;
+        padding: 15px 20px 0px 28px;
+        margin-bottom: -5px;
     }
 }
 
@@ -1582,7 +1605,7 @@ footer a {
 }
 
 footer .copy-right {
-    color: #d9d9d9;
+    color: #dbdbdb;
 }
 
 /*搜索层样式*/
