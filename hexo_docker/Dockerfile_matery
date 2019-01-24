@@ -26,6 +26,7 @@ RUN npm i hexo-permalink-pinyin --save
 RUN npm install hexo-generator-feed --save
 RUN npm install hexo-deployer-git --save
 RUN npm install hexo-generator-sitemap --save
+RUN npm i --save hexo-wordcount
 
 # 挂载volume
 VOLUME ["/hexo/.deploy_git", "/hexo/scaffolds", "/hexo/source", "/hexo/themes", "/root/.ssh"]
